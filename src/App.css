@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  background-color: #F8FAFC; /* Nasz background-light */
+}
+
+/* --- Reszta Twoich customowych stylów z białego motywu --- */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.clip-wave-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+.clip-angle-top {
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 4s ease-in-out 2s infinite;
+}
+
+/* =========================================
+   NOWE STYLE (Dymki, Tło, Animacje, Dioda) 
+   ========================================= */
+
+/* 1. Szerszy (2x) efekt tła */
+.background-effect {
+  position: absolute;
+  width: 200%; /* Dwukrotnie szersze tło */
+  height: 100%;
+  left: -50%; /* Wyśrodkowanie szerszego elementu */
+  top: 0;
+  z-index: 0;
+  transition: transform 2.5s ease-out;
+}
+
+/* 2. Animacja zdjęcia (działa powoli i zostaje na końcu) */
+.animated-image {
+  opacity: 0;
+  transform: scale(0.95) translateY(10px);
+  position: relative;
+  z-index: 10;
+}
+
+/* Klasa aktywująca animację - 'forwards' sprawia, że stan końcowy zostaje na stałe */
+.image-active {
+  animation: slowFadeIn 2.5s ease-out forwards;
+}
+
+@keyframes slowFadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* 3. Dymki (Bubbles) */
+.bubble {
+  position: absolute;
+  padding: 12px 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  font-weight: 500;
+  z-index: 20;
+}
+
+/* Dymek 1: Lewy dół (strzałka w lewy dół) */
+.bubble-bottom-left {
+  bottom: 20px;
+  left: -40px;
+}
+.bubble-bottom-left::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 15px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white;
+  transform: rotate(45deg); /* Przekręcenie strzałki w lewy dół */
+}
+
+/* Dymek 2: Prawa góra (obniżone, strzałka w prawą górę) */
+.bubble-top-right {
+  top: 25%; /* Trochę niżej zdjęcia */
+  right: -30px;
+}
+.bubble-top-right::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: 15px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  transform: rotate(45deg); /* Przekręcenie strzałki w prawą górę */
+}
+
+/* 4. Minimalnie mrugająca zielona dioda */
+.led-green {
+  width: 8px;
+  height: 8px;
+  background-color: #2ecc71;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  box-shadow: 0 0 4px #2ecc71;
+  animation: ledSoftBlink 3s infinite ease-in-out;
+}
+
+@keyframes ledSoftBlink {
+  0%, 100% { 
+    opacity: 1; 
+    box-shadow: 0 0 5px #2ecc71; 
+  }
+  50% { 
+    opacity: 0.6; 
+    box-shadow: 0 0 8px #2ecc71; 
+  }
+}
