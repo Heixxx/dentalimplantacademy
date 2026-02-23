@@ -4,44 +4,38 @@ import { useState, useEffect } from "react";
 const IMG_THINKING = "/thinking.png";
 const IMG_SMILING = "/smile.png";
 
+// === DANE (Wyrzucone poza komponent, by nie renderowały się niepotrzebnie) ===
+const services = [
+    "licówki",
+    "implanty",
+    "wybielanie",
+    "korony",
+    "rekonstrukcję",
+];
+
+const adjectives = ["Precyzyjne", "Promienne", "Perfekcyjne", "Naturalne"];
+
 const Hero = () => {
     const [isFlipped, setIsFlipped] = useState(false);
     const [showFirstBubble, setShowFirstBubble] = useState(false);
     const [showSecondBubble, setShowSecondBubble] = useState(false);
 
-    // Stany dla słów losowanych JEDNORAZOWO przy odświeżeniu
-    const [currentService, setCurrentService] = useState("");
-    const [currentAdj, setCurrentAdj] = useState("");
-
-    const services = [
-        "licówki",
-        "implanty",
-        "wybielanie",
-        "korony",
-        "rekonstrukcję",
-    ];
-    const adjectives = ["Precyzyjne", "Promienne", "Perfekcyjne", "Naturalne"];
+    // FIX: Leniwa inicjalizacja stanu. Funkcja wykona się tylko raz przy starcie.
+    const [currentService] = useState(() => services[Math.floor(Math.random() * services.length)]);
+    const [currentAdj] = useState(() => adjectives[Math.floor(Math.random() * adjectives.length)]);
 
     useEffect(() => {
-        // 1. Losowanie tekstu JEDNORAZOWO przy montowaniu komponentu
-        setCurrentService(
-            services[Math.floor(Math.random() * services.length)]
-        );
-        setCurrentAdj(
-            adjectives[Math.floor(Math.random() * adjectives.length)]
-        );
-
-        // 2. Sekwencja animacji
+        // Tylko asynchroniczna sekwencja animacji zostaje w useEffect
         const t1 = setTimeout(() => {
-            setShowFirstBubble(true); // Najpierw pojawia się górny (lewy) dymek
+            setShowFirstBubble(true); 
         }, 800);
 
         const t2 = setTimeout(() => {
-            setIsFlipped(true); // Potem obraca się karta
+            setIsFlipped(true); 
         }, 2800);
 
         const t3 = setTimeout(() => {
-            setShowSecondBubble(true); // Na końcu pojawia się dolny (prawy) dymek
+            setShowSecondBubble(true); 
         }, 3600);
 
         return () => {
@@ -237,20 +231,6 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10 pointer-events-none">
-                {/* <svg
-                    className="relative block w-full h-[30px] md:h-[50px] text-slate-50"
-                    preserveAspectRatio="none"
-                    viewBox="0 0 1200 120"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        fill="currentColor"
-                    ></path>
-                </svg> */}
             </div>
         </section>
     );
