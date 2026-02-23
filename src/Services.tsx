@@ -1,7 +1,7 @@
 
 const SERVICES_DATA = [
   { title: "Implanty Zębowe", desc: "Trwałe rozwiązanie dla brakujących zębów. Tytanowe i cyrkonowe implanty idealnie łączące się z kością.", icon: "dentistry", colorClass: "bg-primary shadow-primary/30", bgClass: "bg-blue-100", textColor: "text-primary" },
-  { title: "Chirurgia i Odbudowa", desc: "Skomplikowane ekstrakcje, sterowana regeneracja kości i zabiegi chirurgiczne w komfortowych warunkach.", icon: "medical_services", colorClass: "bg-teal shadow-teal/30", bgClass: "bg-green-100", textColor: "text-teal" },
+  { title: "Chirurgia i Odbudowa", desc: "Skomplikowane ekstrakcje, sterowana regeneracja kości i zabiegi chirurgiczne w komfortowych warunkach.", icon: "medical_services", colorClass: "bg-teal shadow-teal/30", bgClass: "bg-teal-100/80", textColor: "text-teal" },
   // ZMIANA: bg-slate-200 -> bg-sky-100, aby kółko było widoczne
   { title: "Protetyka", desc: "Wysokiej jakości korony, mosty i pełne protezy przywracające idealną funkcję żucia oraz naturalny wygląd.", icon: "masks", colorClass: "bg-slate-800 shadow-slate-800/30", bgClass: "bg-sky-100", textColor: "text-slate-800" },
   { title: "Digital Smile Design", desc: "Pełne, cyfrowe projektowanie Twojego nowego uśmiechu z wykorzystaniem najnowszych skanerów 3D.", icon: "health_and_safety", colorClass: "bg-indigo-600 shadow-indigo-600/30", bgClass: "bg-indigo-100", textColor: "text-indigo-600" }
@@ -23,7 +23,6 @@ const Services = () => {
           {SERVICES_DATA.map((service, index) => (
             <div key={index} className="bg-white/70 backdrop-blur-md border border-slate-100 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden text-center lg:text-left flex flex-col items-center lg:items-start">
               
-              {/* Tutaj wymuszam okrągłe tło (rounded-full) */}
               <div className={`absolute -top-6 -right-6 w-32 h-32 ${service.bgClass} rounded-full opacity-50 transition-transform group-hover:scale-110`}></div>
               
               <div className={`w-12 h-12 text-white rounded-xl flex items-center justify-center mb-4 md:mb-6 shadow-lg relative z-10 ${service.colorClass}`}>

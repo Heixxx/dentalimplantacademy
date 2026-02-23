@@ -9,7 +9,10 @@ module.exports = {
       colors: {
         primary: "#0F4C81", // Deep Blue
         secondary: "#1E293B", // Slate Gray
-        teal: "#0d9488", // Medical Teal
+        teal: {
+          DEFAULT: "#0d9488", // Odpowiada za klasy: bg-teal, text-teal, border-teal
+          100: "#ccfbf1",     // Przywraca klasę: bg-teal-100 (jasne tło kółka)
+        },
         "background-light": "#F8FAFC",
         "background-dark": "#0F172A",
         "surface-light": "#FFFFFF",
