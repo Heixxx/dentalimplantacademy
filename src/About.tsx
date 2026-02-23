@@ -1,4 +1,3 @@
-import React from 'react';
 
 // === ZDJĘCIE DOKTORA DO PODMIANY ===
 const IMG_DOCTOR = "";

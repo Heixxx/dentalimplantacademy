@@ -1,4 +1,3 @@
-import React from 'react';
 
 const SERVICES_DATA = [
   { title: "Implanty Zębowe", desc: "Trwałe rozwiązanie dla brakujących zębów. Tytanowe i cyrkonowe implanty idealnie łączące się z kością.", icon: "dentistry", colorClass: "bg-primary shadow-primary/30", bgClass: "bg-blue-100", textColor: "text-primary" },
