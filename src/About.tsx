@@ -1,7 +1,7 @@
 import React from 'react';
 
 // === ZDJĘCIE DOKTORA DO PODMIANY ===
-const IMG_DOCTOR = "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=600&auto=format&fit=crop";
+const IMG_DOCTOR = "";
 
 const About = () => {
   return (
