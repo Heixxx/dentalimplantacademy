@@ -55,18 +55,14 @@ const Showcase = () => {
 
   return (
     <section className="w-full py-16 md:py-24 bg-slate-50 overflow-hidden relative" id="showcase">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 md:mb-12 flex flex-col md:flex-row justify-between items-center md:items-end gap-6 text-center md:text-left">
-        <div>
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 md:mb-12 flex flex-col md:flex-col justify-center items-center md:items-end gap-6 text-center">
+        <div className='text-center w-full'>
           <span className="text-teal font-bold tracking-widest uppercase text-xs md:text-sm block mb-1">Infrastruktura</span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mt-1 md:mt-2">Nasza Klinika</h2>
         </div>
         
-        <div className="flex flex-col items-center md:items-end gap-4 md:gap-5">
-          <p className="text-slate-600 max-w-md text-xs sm:text-sm md:text-base hidden md:block">
-             Zaprojektowana z myślą o sterylności, technologii i Twoim komforcie.
-          </p>
-          <div className="flex gap-2 md:gap-3">
-            {/* Poprawione przyciski z wyraźnym białym tłem i cieniem */}
+        <div className="flex flex-col md:items-end gap-4 md:gap-5 w-full justify-center text-center">
+          <div className="flex gap-2 md:gap-3 w-full flex justify-center">
             <button 
               onClick={handlePrev} disabled={isAnimating}
               className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-300 z-40 relative ${isAnimating ? 'bg-white/50 text-slate-300 cursor-not-allowed shadow-none' : 'bg-white text-primary hover:bg-primary hover:text-white shadow-md hover:shadow-lg'}`}

@@ -17,7 +17,6 @@ const Hero = () => {
         "licówki",
         "implanty",
         "wybielanie",
-        "korony",
         "rekonstrukcję",
     ];
     const adjectives = ["Precyzyjne", "Promienne", "Perfekcyjne", "Naturalne"];

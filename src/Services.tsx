@@ -1,7 +1,7 @@
 
 const SERVICES_DATA = [
   { title: "Implanty Zębowe", desc: "Trwałe rozwiązanie dla brakujących zębów. Tytanowe i cyrkonowe implanty idealnie łączące się z kością.", icon: "dentistry", colorClass: "bg-primary shadow-primary/30", bgClass: "bg-blue-100", textColor: "text-primary" },
-  { title: "Chirurgia i Odbudowa", desc: "Skomplikowane ekstrakcje, sterowana regeneracja kości i zabiegi chirurgiczne w komfortowych warunkach.", icon: "medical_services", colorClass: "bg-teal shadow-teal/30", bgClass: "bg-green-100", textColor: "text-teal" },
+  { title: "Chirurgia i Odbudowa", desc: "Skomplikowane ekstrakcje, sterowana regeneracja kości i zabiegi chirurgiczne w komfortowych warunkach.", icon: "medical_services", colorClass: "bg-teal shadow-teal/30", bgClass: "bg-teal-100/80", textColor: "text-teal" },
   // ZMIANA: bg-slate-200 -> bg-sky-100, aby kółko było widoczne
   { title: "Protetyka", desc: "Wysokiej jakości korony, mosty i pełne protezy przywracające idealną funkcję żucia oraz naturalny wygląd.", icon: "masks", colorClass: "bg-slate-800 shadow-slate-800/30", bgClass: "bg-sky-100", textColor: "text-slate-800" },
   { title: "Digital Smile Design", desc: "Pełne, cyfrowe projektowanie Twojego nowego uśmiechu z wykorzystaniem najnowszych skanerów 3D.", icon: "health_and_safety", colorClass: "bg-indigo-600 shadow-indigo-600/30", bgClass: "bg-indigo-100", textColor: "text-indigo-600" }
