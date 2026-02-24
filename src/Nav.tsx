@@ -21,7 +21,7 @@ const Nav = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center gap-2 md:gap-3">
-            <img src="/logo.png" alt="Dental Implant Academy Logo" className="w-12 h-12 md:w-16 md:h-16" />
+            <img src="/logo.png" alt="Dental Implant Academy Logo" className="w-16 h-16 md:w-20 md:h-20" />
             <div>
               <h1 className="font-display font-bold text-lg md:text-xl text-primary uppercase tracking-wider leading-none">Dental Implant</h1>
               <span className="text-[10px] md:text-xs text-slate-500 font-medium tracking-[0.2em] uppercase">Academy</span>
