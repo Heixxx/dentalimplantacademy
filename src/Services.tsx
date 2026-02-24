@@ -23,7 +23,6 @@ const Services = () => {
           {SERVICES_DATA.map((service, index) => (
             <div key={index} className="bg-white/70 backdrop-blur-md border border-slate-100 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden text-center lg:text-left flex flex-col items-center lg:items-start">
               
-              {/* Tutaj wymuszam okrągłe tło (rounded-full) */}
               <div className={`absolute -top-6 -right-6 w-32 h-32 ${service.bgClass} rounded-full opacity-50 transition-transform group-hover:scale-110`}></div>
               
               <div className={`w-12 h-12 text-white rounded-xl flex items-center justify-center mb-4 md:mb-6 shadow-lg relative z-10 ${service.colorClass}`}>

@@ -1,27 +1,23 @@
 import { useState, useEffect } from "react";
 
-// === ZDJĘCIA ===
 const IMG_THINKING = "/thinking.png";
 const IMG_SMILING = "/smile.png";
+
+const services = [
+    "implanty",
+];
+
+const adjectives = ["Precyzyjne", "Promienne", "Perfekcyjne", "Naturalne"];
 
 const Hero = () => {
     const [isFlipped, setIsFlipped] = useState(false);
     const [showFirstBubble, setShowFirstBubble] = useState(false);
     const [showSecondBubble, setShowSecondBubble] = useState(false);
 
-    const services = [
-        "licówki",
-        "implanty",
-        "wybielanie",
-        "rekonstrukcję",
-    ];
-    const adjectives = ["Precyzyjne", "Promienne", "Perfekcyjne", "Naturalne"];
-    // FIX: Leniwa inicjalizacja stanu. Funkcja wykona się tylko raz przy starcie.
     const [currentService] = useState(() => services[Math.floor(Math.random() * services.length)]);
     const [currentAdj] = useState(() => adjectives[Math.floor(Math.random() * adjectives.length)]);
 
     useEffect(() => {
-        // Tylko asynchroniczna sekwencja animacji zostaje w useEffect
         const t1 = setTimeout(() => {
             setShowFirstBubble(true); 
         }, 800);
