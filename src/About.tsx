@@ -43,7 +43,6 @@ const About = () => {
               <span className="text-primary">Dereka Srokowskiego</span>
             </h2>
             
-            {/* Opis skopiowany i zredagowany z oficjalnej strony */}
             <p className="text-slate-600 mb-6 md:mb-8 leading-relaxed text-sm md:text-base font-light">
               Lekarz stomatolog Darek Srokowski to absolwent wydziału stomatologii University of Western Ontario w Kanadzie, który ukończył w 1987 roku. Posiada wieloletnie doświadczenie w prowadzeniu klinik w Polsce, Kanadzie i Europie zachodniej. W latach 1993-1996 pracował jako asystent profesora na wydziale protetyki uniwersytetu Western Ontario. Od wielu lat kieruje prywatną kliniką specjalizującą się w zaawansowanej rekonstrukcji uzębienia i implantologii.
             </p>

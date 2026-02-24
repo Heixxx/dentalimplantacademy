@@ -42,7 +42,7 @@ const Showcase = () => {
     if (diff > Math.floor(total / 2)) diff -= total;
     else if (diff < -Math.floor(total / 2)) diff += total;
 
-    let base = "absolute top-0 left-0 w-full h-full bg-slate-200 rounded-3xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] will-change-transform ";
+    const base = "absolute top-0 left-0 w-full h-full bg-slate-200 rounded-3xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] will-change-transform ";
 
     if (diff === 0) return base + "z-30 translate-x-0 scale-100 opacity-100 border-white border-4 shadow-[0_20px_50px_rgba(0,0,0,0.15)] cursor-default";
     else if (diff === 1) return base + "z-20 translate-x-[110%] scale-[0.85] opacity-50 cursor-pointer hover:opacity-100 border-white border-2 shadow-lg";
