@@ -4,11 +4,7 @@ const IMG_THINKING = "/thinking.png";
 const IMG_SMILING = "/smile.png";
 
 const services = [
-    "licówki",
     "implanty",
-    "wybielanie",
-    "korony",
-    "rekonstrukcję",
 ];
 
 const adjectives = ["Precyzyjne", "Promienne", "Perfekcyjne", "Naturalne"];
