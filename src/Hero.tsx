@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
 
-// === ZDJĘCIA ===
 const IMG_THINKING = "/thinking.png";
 const IMG_SMILING = "/smile.png";
 
-// === DANE (Wyrzucone poza komponent, by nie renderowały się niepotrzebnie) ===
 const services = [
     "licówki",
     "implanty",
@@ -20,12 +18,10 @@ const Hero = () => {
     const [showFirstBubble, setShowFirstBubble] = useState(false);
     const [showSecondBubble, setShowSecondBubble] = useState(false);
 
-    // FIX: Leniwa inicjalizacja stanu. Funkcja wykona się tylko raz przy starcie.
     const [currentService] = useState(() => services[Math.floor(Math.random() * services.length)]);
     const [currentAdj] = useState(() => adjectives[Math.floor(Math.random() * adjectives.length)]);
 
     useEffect(() => {
-        // Tylko asynchroniczna sekwencja animacji zostaje w useEffect
         const t1 = setTimeout(() => {
             setShowFirstBubble(true); 
         }, 800);
@@ -66,7 +62,6 @@ const Hero = () => {
           0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.4; }
           50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.8; }
         }
-        /* KLUCZOWY FIX: słowo 'both' sprawia, że tło nie skacze po upływie animationDelay */
         .animate-expand-out {
           animation: expandOut 8s ease-in-out infinite both;
         }
@@ -79,7 +74,6 @@ const Hero = () => {
           animation: floatBubble 4s ease-in-out infinite;
         }
 
-        /* Łagodne pojawianie się odświeżanego tekstu i lewej sekcji */
         @keyframes slowFadeIn {
           from { opacity: 0; transform: translateY(15px); }
           to { opacity: 1; transform: translateY(0); }
