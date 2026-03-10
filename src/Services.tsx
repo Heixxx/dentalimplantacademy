@@ -1,43 +1,159 @@
+import React from 'react';
 
-const SERVICES_DATA = [
-  { title: "Implanty Zębowe", desc: "Trwałe rozwiązanie dla brakujących zębów. Tytanowe i cyrkonowe implanty idealnie łączące się z kością.", icon: "dentistry", colorClass: "bg-primary shadow-primary/30", bgClass: "bg-blue-100", textColor: "text-primary" },
-  { title: "Chirurgia i Odbudowa", desc: "Skomplikowane ekstrakcje, sterowana regeneracja kości i zabiegi chirurgiczne w komfortowych warunkach.", icon: "medical_services", colorClass: "bg-teal shadow-teal/30", bgClass: "bg-teal-100/80", textColor: "text-teal" },
-  // ZMIANA: bg-slate-200 -> bg-sky-100, aby kółko było widoczne
-  { title: "Protetyka", desc: "Wysokiej jakości korony, mosty i pełne protezy przywracające idealną funkcję żucia oraz naturalny wygląd.", icon: "masks", colorClass: "bg-slate-800 shadow-slate-800/30", bgClass: "bg-sky-100", textColor: "text-slate-800" },
-  { title: "Digital Smile Design", desc: "Pełne, cyfrowe projektowanie Twojego nowego uśmiechu z wykorzystaniem najnowszych skanerów 3D.", icon: "health_and_safety", colorClass: "bg-indigo-600 shadow-indigo-600/30", bgClass: "bg-indigo-100", textColor: "text-indigo-600" }
-];
-
-const Services = () => {
+const Services: React.FC = () => {
   return (
-    <section className="w-full py-16 md:py-24 bg-white relative clip-angle-top" id="services">
-      <div className="absolute top-0 right-0 w-full lg:w-1/3 h-full bg-slate-50 -z-10 skew-x-12 transform origin-top-right hidden lg:block"></div>
+    <section className="w-full py-16 md:py-24 bg-slate-50 relative overflow-hidden" id="services">
+      <div className="absolute top-0 right-0 w-full lg:w-1/3 h-full bg-white -z-10 skew-x-12 transform origin-top-right hidden lg:block border-l border-slate-100"></div>
       
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 md:mt-12">
-        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
-          <span className="text-primary font-bold tracking-widest uppercase text-xs md:text-sm">Nasze Usługi</span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mt-2 md:mt-3 mb-3 md:mb-4">Kompleksowe Leczenie</h2>
-          <p className="text-slate-600 text-sm md:text-lg font-light">Spersonalizowane plany leczenia zaprojektowane z myślą o precyzji, komforcie i trwałych rezultatach.</p>
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+          <span className="text-[#1A4E84] font-bold tracking-widest uppercase text-xs md:text-sm bg-blue-50 px-4 py-1.5 rounded-full border border-blue-100">
+            Pełen Zakres Usług
+          </span>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mt-6 mb-4">
+            Dbamy o zdrowie od podstaw
+          </h2>
+          <p className="text-slate-500 text-base md:text-lg font-light leading-relaxed">
+            Niezależnie od problemu, z którym się do nas zgłaszaszasz, dysponujemy wiedzą i sprzętem, aby przeprowadzić Cię przez każdy etap leczenia.
+          </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {SERVICES_DATA.map((service, index) => (
-            <div key={index} className="bg-white/70 backdrop-blur-md border border-slate-100 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden text-center lg:text-left flex flex-col items-center lg:items-start">
-              
-              <div className={`absolute -top-6 -right-6 w-32 h-32 ${service.bgClass} rounded-full opacity-50 transition-transform group-hover:scale-110`}></div>
-              
-              <div className={`w-12 h-12 text-white rounded-xl flex items-center justify-center mb-4 md:mb-6 shadow-lg relative z-10 ${service.colorClass}`}>
-                <span className="material-symbols-outlined text-2xl">{service.icon}</span>
-              </div>
-              <h3 className="font-display text-lg md:text-xl font-bold text-slate-900 mb-2 md:mb-3 relative z-10">{service.title}</h3>
-              <p className="text-xs md:text-sm text-slate-600 mb-4 md:mb-6 leading-relaxed relative z-10">
-                {service.desc}
-              </p>
-              <a className={`inline-flex items-center ${service.textColor} text-xs md:text-sm font-bold hover:underline relative z-10 mt-auto`} href="#contact">
-                Dowiedz się więcej <span className="material-symbols-outlined text-xs md:text-sm ml-1">arrow_forward_ios</span>
-              </a>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+          
+  
+  
+  
+          <div className="bg-white border border-slate-100 p-8 md:p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 group relative overflow-hidden flex flex-col h-full text-left">
+            <div className="absolute -top-12 -right-12 w-40 h-40 bg-blue-50 rounded-full opacity-60 transition-transform duration-500 group-hover:scale-125"></div>
+            
+            <div className="w-16 h-16 bg-[#1A4E84] text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg relative z-10 group-hover:rotate-6 transition-transform duration-300">
+              <span className="material-symbols-outlined text-3xl">healing</span>
             </div>
-          ))}
+            
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900 mb-4 relative z-10">
+              Endodoncja
+            </h3>
+            
+            <p className="text-base text-slate-500 mb-6 font-light leading-relaxed relative z-10">
+              Endodoncja czyli leczenie kanałowe. Głównym celem tego zabiegu jest uratowanie zęba przed usunięciem.
+            </p>
+
+            <div className="mt-auto relative z-10">
+                <strong className="text-slate-800 block mb-4 text-base">Kiedy jest potrzebna?</strong>
+                <ul className="space-y-3">
+                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-500 font-light">
+                        <span className="w-2 h-2 mt-2 bg-[#1A4E84] rounded-full shrink-0"></span>
+                        Głęboka próchnica docierająca do miazgi.
+                    </li>
+                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-500 font-light">
+                        <span className="w-2 h-2 mt-2 bg-[#1A4E84] rounded-full shrink-0"></span>
+                        Silny ból zęba (samoistny lub przy nagryzaniu).
+                    </li>
+                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-500 font-light">
+                        <span className="w-2 h-2 mt-2 bg-[#1A4E84] rounded-full shrink-0"></span>
+                        Obumarła miazga (zęby „martwe”).
+                    </li>
+                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-500 font-light">
+                        <span className="w-2 h-2 mt-2 bg-[#1A4E84] rounded-full shrink-0"></span>
+                        Urazy mechaniczne (np. złamanie zęba odsłaniające nerw).
+                    </li>
+                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-500 font-light">
+                        <span className="w-2 h-2 mt-2 bg-[#1A4E84] rounded-full shrink-0"></span>
+                        Konieczność powtórnego leczenia, gdy poprzednie wypełnienie kanału było nieszczelne.
+                    </li>
+                </ul>
+            </div>
+          </div>
+
+  
+  
+  
+          <div className="bg-white border border-slate-100 p-8 md:p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 group relative overflow-hidden flex flex-col h-full text-left">
+            <div className="absolute -top-12 -right-12 w-40 h-40 bg-teal-50 rounded-full opacity-60 transition-transform duration-500 group-hover:scale-125"></div>
+            
+            <div className="w-16 h-16 bg-[#0F766E] text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg relative z-10 group-hover:rotate-6 transition-transform duration-300">
+              <span className="material-symbols-outlined text-3xl">dentistry</span>
+            </div>
+            
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900 mb-4 relative z-10">
+              Stomatologia zachowawcza
+            </h3>
+            
+            <p className="text-base md:text-lg text-slate-500 font-light leading-relaxed relative z-10 space-y-4">
+                <span>Stomatologia zachowawcza zajmuje się rozpoznawaniem i leczeniem próchnicy oraz odbudową zniszczonych przez tę chorobę zębów. Niezwykle ważne jest to, aby zmiany próchnicowe usuwać w jak najwcześniejszym stadium, dzięki czemu leczenie jest proste, mało inwazyjne i tańsze. </span>
+                <br /><br />
+                <span>Dlatego kwestią olbrzymiej wagi są regularne kontrole stanu zębów (najlepiej co 6 miesięcy), które pozwolą na wczesną diagnozę i szybkie podjęcie leczenia.</span>
+            </p>
+          </div>
+
+  
+  
+  
+          <div className="bg-white border border-slate-100 p-8 md:p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 group relative overflow-hidden flex flex-col h-full text-left">
+            <div className="absolute -top-12 -right-12 w-40 h-40 bg-sky-100 rounded-full opacity-60 transition-transform duration-500 group-hover:scale-125"></div>
+            
+            <div className="w-16 h-16 bg-slate-800 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg relative z-10 group-hover:rotate-6 transition-transform duration-300">
+              <span className="material-symbols-outlined text-3xl">medical_services</span>
+            </div>
+            
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900 mb-4 relative z-10">
+              Chirurgia
+            </h3>
+            
+            <p className="text-base text-slate-500 mb-6 font-light leading-relaxed relative z-10">
+              Chirurgia stomatologiczna to dział stomatologii zajmujący się leczeniem operacyjnym w obrębie jamy ustnej. Nowoczesne metody zapewniają precyzję, bezpieczeństwo i komfort pacjenta podczas każdego zabiegu.
+            </p>
+
+            <div className="mt-auto relative z-10">
+                <strong className="text-slate-800 block mb-4 text-base">Najczęstsze zabiegi:</strong>
+                <ul className="space-y-3">
+                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-500 font-light">
+                        <span className="w-2 h-2 mt-2 bg-slate-800 rounded-full shrink-0"></span>
+                        Ekstrakcja zęba.
+                    </li>
+                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-500 font-light">
+                        <span className="w-2 h-2 mt-2 bg-slate-800 rounded-full shrink-0"></span>
+                        Wszczepienie implantów.
+                    </li>
+                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-500 font-light">
+                        <span className="w-2 h-2 mt-2 bg-slate-800 rounded-full shrink-0"></span>
+                        Resekcje wierzchołków korzeni.
+                    </li>
+                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-500 font-light">
+                        <span className="w-2 h-2 mt-2 bg-slate-800 rounded-full shrink-0"></span>
+                        Sterowana regeneracja kości.
+                    </li>
+                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-500 font-light">
+                        <span className="w-2 h-2 mt-2 bg-slate-800 rounded-full shrink-0"></span>
+                        Podniesienie dna zatoki szczękowej.
+                    </li>
+                </ul>
+            </div>
+          </div>
+
+          <div className="bg-white border border-slate-100 p-8 md:p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 group relative overflow-hidden flex flex-col h-full text-left">
+            <div className="absolute -top-12 -right-12 w-40 h-40 bg-indigo-100 rounded-full opacity-60 transition-transform duration-500 group-hover:scale-125"></div>
+            
+            <div className="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg relative z-10 group-hover:rotate-6 transition-transform duration-300">
+              <span className="material-symbols-outlined text-3xl">clean_hands</span>
+            </div>
+            
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900 mb-4 relative z-10">
+              Profilaktyka
+            </h3>
+            
+            <p className="text-base md:text-lg text-slate-500 font-light leading-relaxed relative z-10 space-y-4">
+              <span>Profilaktyka stomatologiczna to działania zapobiegające chorobom jamy ustnej – klucz do zdrowego uśmiechu. Obejmuje regularne wizyty kontrolne, profesjonalne czyszczenie zębów, usuwanie kamienia nazębnego oraz edukację w zakresie higieny jamy ustnej. </span>
+              <br /><br />
+              <span>Dzięki niej można zapobiegać próchnicy i chorobom dziąseł, dbając o długotrwałe zdrowie zębów.</span>
+            </p>
+          </div>
+
         </div>
+
       </div>
     </section>
   );

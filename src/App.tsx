@@ -10,7 +10,7 @@ import ImplantStructure from './Implant';
 
 export default function App() {
   return (
-    <div className="bg-background-light text-slate-800 font-sans antialiased w-full min-h-screen overflow-x-hidden">
+    <div className="bg-background-light text-slate-800 font-sans antialiased w-full min-h-screen overflow-x-clip">
       <Nav />
       <main className="w-full">
         <Hero />

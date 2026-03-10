@@ -24,8 +24,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* USUNIĘTO: display: flex i place-items: center - to one zabijały Sticky! */
   min-width: 320px;
   min-height: 100vh;
 }
