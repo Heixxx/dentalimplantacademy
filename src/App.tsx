@@ -6,6 +6,7 @@ import Services from './Services';
 import Showcase from './Showcase';
 import Contact from './Contact';
 import Footer from './Footer';
+import ImplantStructure from './Implant';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <main className="w-full">
         <Hero />
         <About />
+        <ImplantStructure />
         <Services />
         <Showcase />
         <Contact />

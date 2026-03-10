@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 const IMG_THINKING = "/thinking.png";
 const IMG_SMILING = "/smile.png";
 
-const services = [
-    "implanty",
-];
+// const services = [
+    // "implanty",
+// ];
 
 const adjectives = ["Precyzyjne", "Promienne", "Perfekcyjne", "Naturalne"];
 
@@ -14,7 +14,7 @@ const Hero = () => {
     const [showFirstBubble, setShowFirstBubble] = useState(false);
     const [showSecondBubble, setShowSecondBubble] = useState(false);
 
-    const [currentService] = useState(() => services[Math.floor(Math.random() * services.length)]);
+    // const [currentService] = useState(() => services[Math.floor(Math.random() * services.length)]);
     const [currentAdj] = useState(() => adjectives[Math.floor(Math.random() * adjectives.length)]);
 
     useEffect(() => {
@@ -153,10 +153,11 @@ const Hero = () => {
                             <div className="bg-white px-5 py-3 md:px-6 md:py-4 rounded-3xl relative">
                                 <div className="absolute -bottom-2 right-6 w-5 h-5 bg-white transform rotate-45 rounded-sm"></div>
                                 <p className="text-slate-700 font-medium text-sm md:text-base leading-snug relative z-10">
-                                    Chcę pójść na <br />{" "}
+                                    Komfort i uśmiech? 
+                                    {/* <br />{" "}
                                     <span className="text-primary font-bold text-base md:text-lg">
                                         {currentService}...
-                                    </span>
+                                    </span> */}
                                 </p>
                             </div>
                         </div>
@@ -172,10 +173,10 @@ const Hero = () => {
                             <div className="bg-primary px-5 py-3 md:px-6 md:py-4 rounded-3xl relative">
                                 <div className="absolute -top-2 left-6 w-5 h-5 bg-primary transform rotate-45 rounded-sm"></div>
                                 <p className="text-white font-medium text-sm md:text-base leading-snug relative z-10">
-                                    Więc pójdę do <br />
-                                    <span className="font-bold text-accent">
+                                    Stomatolog z 20-letnim doświadczeniem w implantologii, w Kanadzie i Polsce. <br />
+                                    {/* <span className="font-bold text-accent">
                                         Dental Implant Academy!
-                                    </span>
+                                    </span> */}
                                 </p>
                             </div>
                         </div>
