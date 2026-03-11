@@ -1,55 +1,117 @@
+import React from 'react';
 
-const Footer = () => {
+const Footer: React.FC = () => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+    e.preventDefault();
+    const target = document.querySelector(targetId);
+    if (target) {
+      const navHeight = 80; 
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - navHeight;
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    }
+  };
+
   return (
-    <footer className="w-full bg-white text-slate-600 py-12 md:py-16 border-t border-slate-200">
+    <footer className="w-full bg-slate-50 text-slate-600 py-16 md:py-20 border-t border-slate-200">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 text-center sm:text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center sm:text-left">
           
+          {/* === 1. LOGO I O NAS === */}
           <div className="flex flex-col items-center sm:items-start">
-            <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
-              <span className="material-symbols-outlined text-primary text-2xl md:text-3xl">dentistry</span>
-              <div>
-                <h3 className="font-display font-bold text-base md:text-lg text-slate-900 uppercase tracking-wider leading-none">Dental Implant</h3>
-                <span className="text-[8px] md:text-[10px] text-slate-500 font-medium tracking-[0.2em] uppercase block mt-1">Academy</span>
+            <div className="flex items-center gap-3 mb-6 cursor-pointer" onClick={(e) => handleScroll(e, 'body')}>
+              <img src="/logo.png" alt="Dental Implant Academy Logo" className="w-16 h-16" />
+              <div className="text-left">
+                <h3 className="font-display font-bold text-lg text-[#1A4E84] uppercase tracking-wider leading-none">
+                  Dental Implant
+                </h3>
+                <span className="text-[10px] text-slate-500 font-medium tracking-[0.2em] uppercase block mt-1">
+                  Academy
+                </span>
               </div>
             </div>
-            <p className="text-xs md:text-sm text-slate-500 leading-relaxed mb-6">
+            
+            <p className="text-sm text-slate-500 leading-relaxed mb-6 max-w-[250px]">
               Dedykowani perfekcji w dziedzinie implantologii i stomatologii rekonstrukcyjnej. Twój uśmiech to nasza wizytówka.
             </p>
-            <div className="flex gap-3">
-              <a className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-slate-50 flex items-center justify-center hover:bg-primary hover:text-white transition border border-slate-200 text-slate-500 shadow-sm" href="https://www.facebook.com/people/Dental-Implant-Academy/61586910009789/" target="_blank" rel="noreferrer" aria-label="Facebook">
-                <svg className="w-4 h-4 md:w-5 md:h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              </a>
-              <a className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-slate-50 flex items-center justify-center hover:bg-primary hover:text-white transition border border-slate-200 text-slate-500 shadow-sm" href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="X">X
-                 {/* <svg className="w-4 h-4 md:w-5 md:h-5 fill-current" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg> */}
+            
+            <div className="flex gap-4">
+              <a 
+                href="https://www.facebook.com/people/Dental-Implant-Academy/61586910009789/" 
+                target="_blank" 
+                rel="noreferrer" 
+                aria-label="Facebook"
+                className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-[#1A4E84] hover:text-white transition-colors border border-slate-200 text-[#1A4E84] shadow-sm"
+              >
+                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
               </a>
             </div>
           </div>
           
+          {/* === 2. NAWIGACJA === */}
           <div>
-            <h4 className="text-slate-900 font-bold mb-4 md:mb-6 uppercase text-[10px] md:text-sm tracking-widest border-b sm:border-b-0 sm:border-l-2 sm:border-primary sm:pl-3 pb-2 sm:pb-0">Nawigacja</h4>
-            <ul className="space-y-2 md:space-y-3 text-xs md:text-sm inline-block sm:block text-left">
-              <li><a className="text-slate-600 hover:text-primary transition flex items-center gap-2" href="#about"><span className="w-1 h-1 bg-slate-300 rounded-full hidden sm:block"></span> O naszej Klinice</a></li>
-              <li><a className="text-slate-600 hover:text-primary transition flex items-center gap-2" href="#services"><span className="w-1 h-1 bg-slate-300 rounded-full hidden sm:block"></span> Nasze Usługi</a></li>
-              <li><a className="text-slate-600 hover:text-primary transition flex items-center gap-2" href="#showcase"><span className="w-1 h-1 bg-slate-300 rounded-full hidden sm:block"></span> Wyposażenie</a></li>
+            <h4 className="text-[#1A4E84] font-bold mb-6 uppercase text-xs tracking-widest border-b sm:border-b-0 sm:border-l-2 sm:border-[#1A4E84] sm:pl-3 pb-2 sm:pb-0">
+              Nawigacja
+            </h4>
+            <ul className="space-y-3 text-sm inline-block sm:block text-left">
+              <li>
+                <a onClick={(e) => handleScroll(e, '#about')} className="text-slate-600 hover:text-[#1A4E84] hover:font-medium transition-all flex items-center gap-2 cursor-pointer">
+                  <span className="w-1.5 h-1.5 bg-blue-200 rounded-full hidden sm:block"></span> 
+                  O naszej Klinice
+                </a>
+              </li>
+              <li>
+                <a onClick={(e) => handleScroll(e, '#implanty')} className="text-slate-600 hover:text-[#1A4E84] hover:font-medium transition-all flex items-center gap-2 cursor-pointer">
+                  <span className="w-1.5 h-1.5 bg-blue-200 rounded-full hidden sm:block"></span> 
+                  Wszystko o implantach
+                </a>
+              </li>
+              <li>
+                <a onClick={(e) => handleScroll(e, '#services')} className="text-slate-600 hover:text-[#1A4E84] hover:font-medium transition-all flex items-center gap-2 cursor-pointer">
+                  <span className="w-1.5 h-1.5 bg-blue-200 rounded-full hidden sm:block"></span> 
+                  Nasze Usługi
+                </a>
+              </li>
             </ul>
           </div>
           
+          {/* === 3. GODZINY OTWARCIA === */}
           <div>
-            <h4 className="text-slate-900 font-bold mb-4 md:mb-6 uppercase text-[10px] md:text-sm tracking-widest border-b sm:border-b-0 sm:border-l-2 sm:border-primary sm:pl-3 pb-2 sm:pb-0">Specjalizacje</h4>
-            <ul className="space-y-2 md:space-y-3 text-xs md:text-sm inline-block sm:block text-left">
-              <li><a className="text-slate-600 hover:text-primary transition flex items-center gap-2" href="#"><span className="w-1 h-1 bg-slate-300 rounded-full hidden sm:block"></span> Zaawansowana Protetyka</a></li>
-              <li><a className="text-slate-600 hover:text-primary transition flex items-center gap-2" href="#"><span className="w-1 h-1 bg-slate-300 rounded-full hidden sm:block"></span> Nowoczesna Implantologia</a></li>
-              <li><a className="text-slate-600 hover:text-primary transition flex items-center gap-2" href="#"><span className="w-1 h-1 bg-slate-300 rounded-full hidden sm:block"></span> Rekonstrukcja Uzębienia</a></li>
+            <h4 className="text-[#1A4E84] font-bold mb-6 uppercase text-xs tracking-widest border-b sm:border-b-0 sm:border-l-2 sm:border-[#1A4E84] sm:pl-3 pb-2 sm:pb-0">
+              Godziny otwarcia
+            </h4>
+            <ul className="space-y-3 text-sm text-slate-500 inline-block sm:block text-left w-full max-w-[200px]">
+              <li className="flex justify-between border-b border-slate-200 pb-2">
+                <span>Pon - Pt:</span>
+                <span className="font-medium text-slate-700">08:00 - 20:00</span>
+              </li>
+              <li className="flex justify-between border-b border-slate-200 pb-2">
+                <span>Sobota:</span>
+                <span className="font-medium text-slate-700">09:00 - 14:00</span>
+              </li>
+              <li className="flex justify-between pb-2">
+                <span>Niedziela:</span>
+                <span className="font-medium text-slate-400">Zamknięte</span>
+              </li>
             </ul>
           </div>
           
+          {/* === 4. SZYBKI KONTAKT === */}
           <div>
-            <h4 className="text-slate-900 font-bold mb-4 md:mb-6 uppercase text-[10px] md:text-sm tracking-widest border-b sm:border-b-0 sm:border-l-2 sm:border-teal sm:pl-3 pb-2 sm:pb-0">Szybki Kontakt</h4>
-            <p className="text-xs md:text-sm text-slate-500 mb-1 md:mb-2">Masz pytania lub problem?</p>
-            <a className="text-primary font-display font-bold hover:text-teal transition text-xl md:text-2xl block mb-4 md:mb-6" href="tel:+48178533385">17 853 33 85</a>
-            <div className="text-[10px] md:text-xs text-slate-400 border-t border-slate-200 pt-4">
-              <p>© 2026 Dental Implant Academy.</p>
+            <h4 className="text-[#1A4E84] font-bold mb-6 uppercase text-xs tracking-widest border-b sm:border-b-0 sm:border-l-2 sm:border-[#1A4E84] sm:pl-3 pb-2 sm:pb-0">
+              Szybki Kontakt
+            </h4>
+            <p className="text-sm text-slate-500 mb-2">
+              Umów się na wizytę lub zadaj pytanie.
+            </p>
+            
+            <a href="tel:+48178533385" className="inline-flex items-center gap-2 text-[#1A4E84] font-display font-bold hover:text-sky-600 transition-colors text-2xl mb-8 group">
+              <span className="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">phone_in_talk</span>
+              17 853 33 85
+            </a>
+
+            <div className="text-xs text-slate-400 border-t border-slate-200 pt-6">
+              <p>&copy; {new Date().getFullYear()} Dental Implant Academy.</p>
               <p>Wszelkie prawa zastrzeżone.</p>
             </div>
           </div>

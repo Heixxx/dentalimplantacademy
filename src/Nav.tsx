@@ -35,13 +35,14 @@ const Nav = () => {
           </div>
 
 
-          <div className="hidden lg:flex space-x-8 items-center bg-white/95 backdrop-blur-md">
 
+          <div className="hidden lg:flex space-x-8 items-center">
 
             <a onClick={(e) => handleScroll(e, '#about')} className="relative group text-slate-600 hover:text-[#1A4E84] font-medium transition-colors duration-300 cursor-pointer">
               O nas
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#1A4E84] transition-all duration-300 group-hover:w-full"></span>
             </a>
+
             <a onClick={(e) => handleScroll(e, '#implanty')} className="relative group text-slate-600 hover:text-[#1A4E84] font-medium transition-colors duration-300 cursor-pointer">
               Implanty
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#1A4E84] transition-all duration-300 group-hover:w-full"></span>
@@ -52,13 +53,10 @@ const Nav = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#1A4E84] transition-all duration-300 group-hover:w-full"></span>
             </a>
 
-
-
             <div className="flex items-center gap-2 text-[#1A4E84] font-semibold border-l border-slate-200 pl-8">
               <span className="material-symbols-outlined text-lg">call</span>
               <span className="tracking-wide">17 853 33 85</span>
             </div>
-
 
             <a onClick={(e) => handleScroll(e, '#contact')} className="bg-[#1A4E84] hover:bg-[#123860] text-white px-7 py-2.5 rounded-full font-medium transition-all duration-300 shadow-lg shadow-[#1A4E84]/20 cursor-pointer hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#1A4E84]/30 hover:text-white">
               Umów wizytę
@@ -67,9 +65,10 @@ const Nav = () => {
 
 
           <div className="lg:hidden flex items-center">
+
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="bg-slate-50 text-[#1A4E84] border border-slate-200 shadow-sm focus:outline-none p-2.5 rounded-xl hover:bg-slate-100 transition-colors flex items-center justify-center"
+              className="bg-transparent text-[#1A4E84] border border-slate-200 shadow-sm focus:outline-none p-2.5 rounded-xl hover:bg-slate-100/50 transition-colors flex items-center justify-center"
               aria-label="Toggle menu"
             >
               <span className={`material-symbols-outlined text-2xl transition-transform duration-300 ${isOpen ? 'rotate-90 scale-110' : 'rotate-0'}`}>
@@ -81,8 +80,9 @@ const Nav = () => {
       </div>
 
 
+
       <div
-        className={`lg:hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-2xl flex flex-col items-center space-y-6 overflow-hidden transition-all duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? "max-h-[500px] py-8 opacity-100 visible" : "max-h-0 py-0 opacity-0 invisible"
+        className={`lg:hidden absolute top-20 left-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-2xl flex flex-col items-center space-y-6 overflow-hidden transition-all duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? "max-h-[500px] py-8 opacity-100 visible" : "max-h-0 py-0 opacity-0 invisible"
           }`}
       >
         <a onClick={(e) => handleScroll(e, '#about')} className="text-slate-800 hover:text-[#1A4E84] font-bold text-xl cursor-pointer transition-colors">O nas</a>
@@ -92,7 +92,8 @@ const Nav = () => {
         <div className="w-16 h-px bg-slate-200 my-2"></div>
 
         <div className="flex flex-col items-center gap-4">
-          <div className="flex items-center gap-2 text-[#1A4E84] font-semibold text-lg bg-blue-50 px-6 py-2 rounded-full border border-blue-100">
+
+          <div className="flex items-center gap-2 text-[#1A4E84] font-semibold text-lg bg-white/50 backdrop-blur-sm px-6 py-2 rounded-full border border-slate-200 shadow-sm">
             <span className="material-symbols-outlined">call</span>
             <span>17 853 33 85</span>
           </div>
