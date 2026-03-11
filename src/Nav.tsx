@@ -85,9 +85,9 @@ const Nav = () => {
         className={`lg:hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-2xl flex flex-col items-center space-y-6 overflow-hidden transition-all duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? "max-h-[500px] py-8 opacity-100 visible" : "max-h-0 py-0 opacity-0 invisible"
           }`}
       >
+        <a onClick={(e) => handleScroll(e, '#about')} className="text-slate-800 hover:text-[#1A4E84] font-bold text-xl cursor-pointer transition-colors">O nas</a>
         <a onClick={(e) => handleScroll(e, '#implanty')} className="text-slate-800 hover:text-[#1A4E84] font-bold text-xl cursor-pointer transition-colors">Implanty</a>
         <a onClick={(e) => handleScroll(e, '#services')} className="text-slate-800 hover:text-[#1A4E84] font-bold text-xl cursor-pointer transition-colors">Usługi</a>
-        <a onClick={(e) => handleScroll(e, '#about')} className="text-slate-800 hover:text-[#1A4E84] font-bold text-xl cursor-pointer transition-colors">O nas</a>
 
         <div className="w-16 h-px bg-slate-200 my-2"></div>
 
