@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer: React.FC = () => {
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+  const handleScroll = (e: React.MouseEvent<HTMLElement, MouseEvent>, targetId: string) => {
     e.preventDefault();
     const target = document.querySelector(targetId);
     if (target) {

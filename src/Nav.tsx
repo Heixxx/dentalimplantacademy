@@ -22,7 +22,7 @@ const Nav = () => {
         <div className="flex justify-between items-center h-20">
 
 
-          <div className="flex items-center gap-2 md:gap-3 cursor-pointer" onClick={(e) => handleScroll(e as any, 'body')}>
+          <div className="flex items-center gap-2 md:gap-3 cursor-pointer" onClick={(e) => handleScroll(e as unknown as React.MouseEvent<HTMLAnchorElement, MouseEvent>, 'body')}>
             <img src="/logo.png" alt="Dental Implant Academy Logo" className="w-16 h-16 md:w-20 md:h-20" />
             <div>
               <h1 className="font-display font-bold text-lg md:text-xl text-[#1A4E84] uppercase tracking-wider leading-none">
