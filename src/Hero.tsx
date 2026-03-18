@@ -2,11 +2,6 @@ import { useState, useEffect } from "react";
 
 const IMG_THINKING = "/thinking.png";
 const IMG_SMILING = "/smile.png";
-
-const services = [
-    "implanty",
-];
-
 const adjectives = ["Precyzyjne", "Promienne", "Perfekcyjne", "Naturalne"];
 
 const Hero = () => {
@@ -14,20 +9,20 @@ const Hero = () => {
     const [showFirstBubble, setShowFirstBubble] = useState(false);
     const [showSecondBubble, setShowSecondBubble] = useState(false);
 
-    const [currentService] = useState(() => services[Math.floor(Math.random() * services.length)]);
+
     const [currentAdj] = useState(() => adjectives[Math.floor(Math.random() * adjectives.length)]);
 
     useEffect(() => {
         const t1 = setTimeout(() => {
-            setShowFirstBubble(true); 
+            setShowFirstBubble(true);
         }, 800);
 
         const t2 = setTimeout(() => {
-            setIsFlipped(true); 
+            setIsFlipped(true);
         }, 2800);
 
         const t3 = setTimeout(() => {
-            setShowSecondBubble(true); 
+            setShowSecondBubble(true);
         }, 3600);
 
         return () => {
@@ -58,7 +53,6 @@ const Hero = () => {
           0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.4; }
           50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.8; }
         }
-        /* KLUCZOWY FIX: słowo 'both' sprawia, że tło nie skacze po upływie animationDelay */
         .animate-expand-out {
           animation: expandOut 8s ease-in-out infinite both;
         }
@@ -71,7 +65,6 @@ const Hero = () => {
           animation: floatBubble 4s ease-in-out infinite;
         }
 
-        /* Łagodne pojawianie się odświeżanego tekstu i lewej sekcji */
         @keyframes slowFadeIn {
           from { opacity: 0; transform: translateY(15px); }
           to { opacity: 1; transform: translateY(0); }
@@ -146,38 +139,37 @@ const Hero = () => {
                         ></div>
 
                         <div
-                            className={`absolute top-4 lg:top-14 -left-2 lg:-left-12 z-30 transition-all duration-700 ease-out max-w-[200px] md:max-w-[240px] animate-float-bubble drop-shadow-xl ${
-                                showFirstBubble
-                                    ? "opacity-100 scale-100 translate-y-0"
-                                    : "opacity-0 scale-50 translate-y-10"
-                            }`}
+                            className={`absolute top-4 lg:top-14 -left-2 lg:-left-12 z-30 transition-all duration-700 ease-out max-w-[200px] md:max-w-[240px] animate-float-bubble drop-shadow-xl ${showFirstBubble
+                                ? "opacity-100 scale-100 translate-y-0"
+                                : "opacity-0 scale-50 translate-y-10"
+                                }`}
                         >
                             <div className="bg-white px-5 py-3 md:px-6 md:py-4 rounded-3xl relative">
                                 <div className="absolute -bottom-2 right-6 w-5 h-5 bg-white transform rotate-45 rounded-sm"></div>
                                 <p className="text-slate-700 font-medium text-sm md:text-base leading-snug relative z-10">
-                                    Chcę pójść na <br />{" "}
+                                    Komfort i uśmiech?
+                                    {/* <br />{" "}
                                     <span className="text-primary font-bold text-base md:text-lg">
                                         {currentService}...
-                                    </span>
+                                    </span> */}
                                 </p>
                             </div>
                         </div>
 
                         <div
-                            className={`absolute bottom-10 lg:bottom-24 -right-2 lg:-right-12 z-30 transition-all duration-700 ease-out max-w-[220px] md:max-w-[260px] animate-float-bubble drop-shadow-xl ${
-                                showSecondBubble
-                                    ? "opacity-100 scale-100 translate-y-0"
-                                    : "opacity-0 scale-50 translate-y-10"
-                            }`}
+                            className={`absolute bottom-10 lg:bottom-24 -right-2 lg:-right-12 z-30 transition-all duration-700 ease-out max-w-[220px] md:max-w-[260px] animate-float-bubble drop-shadow-xl ${showSecondBubble
+                                ? "opacity-100 scale-100 translate-y-0"
+                                : "opacity-0 scale-50 translate-y-10"
+                                }`}
                             style={{ animationDelay: "1s" }}
                         >
                             <div className="bg-primary px-5 py-3 md:px-6 md:py-4 rounded-3xl relative">
                                 <div className="absolute -top-2 left-6 w-5 h-5 bg-primary transform rotate-45 rounded-sm"></div>
                                 <p className="text-white font-medium text-sm md:text-base leading-snug relative z-10">
-                                    Więc pójdę do <br />
-                                    <span className="font-bold text-accent">
+                                    Stomatolog z ponad 20-letnim doświadczeniem w implantologii, w Kanadzie i Polsce. <br />
+                                    {/* <span className="font-bold text-accent">
                                         Dental Implant Academy!
-                                    </span>
+                                    </span> */}
                                 </p>
                             </div>
                         </div>
