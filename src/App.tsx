@@ -6,6 +6,7 @@ import Services from './Services';
 import Showcase from './Showcase';
 import Contact from './Contact';
 import Footer from './Footer';
+import CookieBanner from './CookieBanner';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <CookieBanner></CookieBanner>
     </div>
   );
 }
