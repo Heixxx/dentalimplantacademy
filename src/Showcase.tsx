@@ -66,10 +66,14 @@ const Showcase = () => {
           <div className="flex gap-2 md:gap-3 w-full flex justify-center">
             <button 
               onClick={handlePrev} disabled={isAnimating}
+              aria-label="Poprzednia galeria"
+              aria-disabled={isAnimating}
               className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-300 z-40 relative ${isAnimating ? 'bg-white/50 text-slate-300 cursor-not-allowed shadow-none' : 'bg-white text-primary hover:bg-primary hover:text-white shadow-md hover:shadow-lg'}`}
             ><span className="material-symbols-outlined text-sm md:text-base font-bold">arrow_back</span></button>
             <button 
               onClick={handleNext} disabled={isAnimating}
+              aria-label="Następna galeria"
+              aria-disabled={isAnimating}
               className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-300 z-40 relative ${isAnimating ? 'bg-white/50 text-slate-300 cursor-not-allowed shadow-none' : 'bg-white text-primary hover:bg-primary hover:text-white shadow-md hover:shadow-lg'}`}
             ><span className="material-symbols-outlined text-sm md:text-base font-bold">arrow_forward</span></button>
           </div>

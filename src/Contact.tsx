@@ -14,7 +14,7 @@ const Contact = () => {
                 {/* Numer Telefonu */}
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 md:gap-4">
                   <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center border border-slate-200 flex-shrink-0">
-                    <span className="material-symbols-outlined text-primary">call</span>
+                    <span className="material-symbols-outlined text-primary" aria-hidden="true">call</span>
                   </div>
                   <div>
                     <p className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest font-bold mb-1">Zadzwoń do nas</p>
@@ -25,7 +25,7 @@ const Contact = () => {
                 {/* Adres Kliniki */}
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 md:gap-4">
                   <div className="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center border border-slate-200 flex-shrink-0">
-                    <span className="material-symbols-outlined text-teal">location_on</span>
+                    <span className="material-symbols-outlined text-teal" aria-hidden="true">location_on</span>
                   </div>
                   <div>
                     <p className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest font-bold mb-1">Odwiedź nas</p>
@@ -36,7 +36,7 @@ const Contact = () => {
                 {/* Godziny Otwarcia */}
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 md:gap-4">
                   <div className="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center border border-slate-200 flex-shrink-0">
-                    <span className="material-symbols-outlined text-indigo-500">schedule</span>
+                    <span className="material-symbols-outlined text-indigo-500" aria-hidden="true">schedule</span>
                   </div>
                   <div>
                     <p className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest font-bold mb-1">Godziny przyjęć</p>
@@ -60,7 +60,7 @@ const Contact = () => {
             
             <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 bg-white p-3 md:p-4 rounded-xl shadow-lg max-w-[200px] md:max-w-xs border border-slate-100 hidden sm:block">
               <div className="flex items-center gap-2 mb-1">
-                <span className="material-symbols-outlined text-primary text-sm md:text-base">info</span>
+                <span className="material-symbols-outlined text-primary text-sm md:text-base" aria-hidden="true">info</span>
                 <p className="font-bold text-slate-800 text-xs md:text-sm">Zapisy telefoniczne</p>
               </div>
               <p className="text-[10px] md:text-xs text-slate-500">Prosimy o kontakt w celu umówienia wizyty przed przybyciem do kliniki.</p>

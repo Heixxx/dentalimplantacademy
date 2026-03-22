@@ -103,7 +103,7 @@ const Hero = () => {
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                         <a
-                            className="bg-primary text-white px-8 py-4 rounded-xl text-center font-medium hover:bg-blue-800 transition duration-300 shadow-xl shadow-primary/20 flex items-center justify-center gap-2 group"
+                            className="bg-primary text-white px-8 py-4 rounded-xl text-center font-medium hover:bg-green-300 transition duration-300 shadow-xl shadow-primary/20 flex items-center justify-center gap-2 group"
                             href="#contact"
                         >
                             Umów Konsultację

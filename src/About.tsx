@@ -1,6 +1,6 @@
 
 // === ZDJĘCIE DOKTORA DO PODMIANY ===
-const IMG_DOCTOR = "";
+const IMG_DOCTOR = "/Doctor.png";
 
 const About = () => {
   return (
@@ -12,25 +12,25 @@ const About = () => {
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
             
             {/* Zdjęcie doktora */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl transform lg:rotate-2 group-hover:rotate-0 transition duration-500">
-              <img alt="Lekarz stomatolog Derek Srokowski" className="object-cover object-top h-[450px] md:h-[600px] w-full" src={IMG_DOCTOR} />
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl transform lg:rotate-2 group-hover:rotate-0 transition duration-500 aspect-square max-w-md mx-auto">
+              <img alt="Lekarz stomatolog Derek Srokowski" className="object-cover object-top w-full h-full" src={IMG_DOCTOR} />
             </div>
 
             {/* Kafelki z efektem pływającego Dymka */}
             <div className="absolute top-8 -left-6 md:-left-10 bg-white/90 backdrop-blur-md border border-slate-100 p-4 rounded-2xl shadow-xl z-20 max-w-[180px] animate-float">
-              <span className="material-symbols-outlined text-primary text-3xl mb-1">public</span>
+              <span className="material-symbols-outlined text-primary text-3xl mb-1" aria-hidden="true">public</span>
               <p className="font-bold text-sm text-slate-800">Kliniki</p>
               <p className="text-xs text-slate-500">Kanada & Rzeszów</p>
             </div>
 
             <div className="absolute bottom-20 -right-6 md:-right-8 bg-white/90 backdrop-blur-md border border-slate-100 p-4 rounded-2xl shadow-xl z-20 max-w-[180px] animate-float-delayed">
-              <span className="material-symbols-outlined text-teal text-3xl mb-1">workspace_premium</span>
+              <span className="material-symbols-outlined text-teal text-3xl mb-1" aria-hidden="true">workspace_premium</span>
               <p className="font-bold text-sm text-slate-800">Certyfikaty</p>
               <p className="text-xs text-slate-500">Członek RCDSO & OIL</p>
             </div>
             
             <div className="absolute -bottom-6 left-10 bg-white/90 backdrop-blur-md border border-slate-100 p-4 rounded-2xl shadow-xl z-20 max-w-[220px] animate-float">
-               <span className="material-symbols-outlined text-primary text-3xl mb-1">implants</span>
+               <span className="material-symbols-outlined text-primary text-3xl mb-1" aria-hidden="true">implants</span>
               <p className="font-bold text-sm text-slate-800">Specjalizacja</p>
               <p className="text-xs text-slate-500">Implantologia i rekonstrukcja</p>
             </div>
