@@ -13,7 +13,7 @@ const About = () => {
             
             {/* Zdjęcie doktora */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl transform lg:rotate-2 group-hover:rotate-0 transition duration-500 aspect-square max-w-md mx-auto">
-              <img alt="Lekarz stomatolog Derek Srokowski" className="object-cover object-top w-full h-full" src={IMG_DOCTOR} />
+              <img alt="Lekarz stomatolog Derek Srokowski" className="object-cover object-left w-full h-full" src={IMG_DOCTOR} />
             </div>
 
             {/* Kafelki z efektem pływającego Dymka */}
