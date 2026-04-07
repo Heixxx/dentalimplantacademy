@@ -29,7 +29,7 @@ const Nav = () => {
                 Dental Implant
               </h1>
               <span className="text-[10px] md:text-xs text-slate-500 font-medium tracking-[0.2em] uppercase">
-                Academy
+                Academy - Rzeszów
               </span>
             </div>
           </div>
