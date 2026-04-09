@@ -8,6 +8,8 @@ import Contact from './Contact';
 import Footer from './Footer';
 import CookieBanner from './CookieBanner';
 import ImplantStructure from './Implant';
+import TeamGallery from './TeamGallery';
+import Faq from './Faq';
 
 export default function App() {
   return (
@@ -18,7 +20,9 @@ export default function App() {
         <About />
         <ImplantStructure />
         <Services />
+        <TeamGallery />
         <Showcase />
+        <Faq />
         <Contact />
       </main>
       <Footer />

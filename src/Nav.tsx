@@ -1,18 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+
+interface LangOption {
+  code: string;
+  label: string;
+  flag: string;
+}
+
+const LANGUAGES: LangOption[] = [
+  { code: 'pl', label: 'Polski', flag: '🇵🇱' },
+  { code: 'en', label: 'English', flag: '🇬🇧' },
+  { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
+  { code: 'uk', label: 'Українська', flag: '🇺🇦' },
+];
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const [currentLang, setCurrentLang] = useState<LangOption>(LANGUAGES[0]);
+  const langRef = useRef<HTMLDivElement>(null);
   const closeMenu = () => setIsOpen(false);
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) setLangOpen(false);
+    };
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
+  }, []);
+
+  const selectLang = (lang: LangOption) => {
+    setCurrentLang(lang);
+    setLangOpen(false);
+  };
+
+  const handleScroll = (e: React.MouseEvent<HTMLElement, MouseEvent>, targetId: string) => {
     e.preventDefault();
     closeMenu();
+    if (targetId === 'body' || targetId === '#top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     const target = document.querySelector(targetId);
     if (target) {
       const navHeight = 80;
       const elementPosition = target.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - navHeight;
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     }
   };
 
@@ -22,7 +56,7 @@ const Nav = () => {
         <div className="flex justify-between items-center h-20">
 
 
-          <div className="flex items-center gap-2 md:gap-3 cursor-pointer" onClick={(e) => handleScroll(e as unknown as React.MouseEvent<HTMLAnchorElement, MouseEvent>, 'body')}>
+          <div className="flex items-center gap-2 md:gap-3 cursor-pointer" onClick={(e) => handleScroll(e, '#top')}>
             <img src="/logo.png" alt="Dental Implant Academy Logo" className="w-16 h-16 md:w-20 md:h-20" />
             <div>
               <h1 className="font-display font-bold text-lg md:text-xl text-[#1A4E84] uppercase tracking-wider leading-none">
@@ -36,29 +70,70 @@ const Nav = () => {
 
 
 
-          <div className="hidden lg:flex space-x-8 items-center">
+          <div className="hidden lg:flex space-x-4 items-center">
 
-            <a onClick={(e) => handleScroll(e, '#about')} className="relative group text-slate-600 hover:text-[#1A4E84] font-medium transition-colors duration-300 cursor-pointer">
+            <a onClick={(e) => handleScroll(e, '#about')} className="relative group text-slate-600 hover:text-[#1A4E84] font-medium transition-colors duration-300 cursor-pointer m-0">
               O nas
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#1A4E84] transition-all duration-300 group-hover:w-full"></span>
             </a>
 
-            <a onClick={(e) => handleScroll(e, '#implanty')} className="relative group text-slate-600 hover:text-[#1A4E84] font-medium transition-colors duration-300 cursor-pointer">
+            <a onClick={(e) => handleScroll(e, '#implanty')} className="relative group text-slate-600 hover:text-[#1A4E84] font-medium transition-colors duration-300 cursor-pointer m-0">
               Implanty
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#1A4E84] transition-all duration-300 group-hover:w-full"></span>
             </a>
 
-            <a onClick={(e) => handleScroll(e, '#services')} className="relative group text-slate-600 hover:text-[#1A4E84] font-medium transition-colors duration-300 cursor-pointer">
+            <a onClick={(e) => handleScroll(e, '#services')} className="relative group text-slate-600 hover:text-[#1A4E84] font-medium transition-colors duration-300 cursor-pointer m-0">
               Usługi
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#1A4E84] transition-all duration-300 group-hover:w-full"></span>
             </a>
 
-            <div className="flex items-center gap-2 text-[#1A4E84] font-semibold border-l border-slate-200 pl-8">
+            <div className="flex items-center gap-2 text-[#1A4E84] font-semibold border-l border-slate-200 pl-4">
               <span className="material-symbols-outlined text-lg">call</span>
               <span className="tracking-wide">17 853 33 85</span>
             </div>
 
-            <a onClick={(e) => handleScroll(e, '#contact')} className="bg-[#1A4E84] hover:bg-[#123860] text-white px-7 py-2.5 rounded-full font-medium transition-all duration-300 shadow-lg shadow-[#1A4E84]/20 cursor-pointer hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#1A4E84]/30 hover:text-white">
+            
+            <div className="relative" ref={langRef}>
+              <button
+                onClick={() => setLangOpen((p) => !p)}
+                aria-haspopup="listbox"
+                aria-expanded={langOpen}
+                aria-label={`Zmień język – aktualny: ${currentLang.label}`}
+                className="flex items-center gap-1 px-3 py-2 rounded-full border border-slate-200 hover:border-[#1A4E84]/30 bg-white text-slate-700 text-sm font-medium transition-all duration-200 hover:shadow-sm focus-visible:ring-2 focus-visible:ring-[#1A4E84] focus-visible:ring-offset-2"
+              >
+                <span className="text-base leading-none" aria-hidden="true">{currentLang.flag}</span>
+                <span className="uppercase text-xs font-bold tracking-wider">{currentLang.code}</span>
+                <span className={`material-symbols-outlined text-sm text-slate-400 transition-transform duration-300 ${langOpen ? 'rotate-180' : ''}`} aria-hidden="true">expand_more</span>
+              </button>
+
+              {langOpen && (
+                <ul
+                  role="listbox"
+                  aria-label="Wybierz język"
+                  className="absolute right-0 mt-2 w-44 bg-white border border-slate-100 rounded-2xl shadow-xl py-2 z-50 animate-[fadeIn_150ms_ease-out]"
+                >
+                  {LANGUAGES.map((lang) => (
+                    <li key={lang.code} role="option" aria-selected={currentLang.code === lang.code}>
+                      <button
+                        onClick={() => selectLang(lang)}
+                        className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors
+                          ${currentLang.code === lang.code
+                            ? 'bg-[#1A4E84]/5 text-[#1A4E84] font-semibold'
+                            : 'text-slate-700 hover:bg-slate-50'}`}
+                      >
+                        <span className="text-lg leading-none" aria-hidden="true">{lang.flag}</span>
+                        <span>{lang.label}</span>
+                        {currentLang.code === lang.code && (
+                          <span className="material-symbols-outlined text-[#1A4E84] text-sm ml-auto" aria-hidden="true">check</span>
+                        )}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+
+            <a onClick={(e) => handleScroll(e, '#contact')} className="bg-[#1A4E84] hover:bg-[#123860] text-white px-5 py-2 rounded-full font-medium transition-all duration-300 shadow-lg shadow-[#1A4E84]/20 cursor-pointer hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#1A4E84]/30 hover:text-white">
               Umów wizytę
             </a>
           </div>
@@ -91,6 +166,26 @@ const Nav = () => {
 
         <div className="w-16 h-px bg-slate-200 my-2"></div>
 
+        
+        <div className="flex items-center gap-2">
+          {LANGUAGES.map((lang) => (
+            <button
+              key={lang.code}
+              onClick={() => selectLang(lang)}
+              aria-label={`Zmień język na ${lang.label}`}
+              className={`flex items-center gap-1 px-3 py-2 rounded-full border text-sm font-medium transition-all duration-200
+                ${currentLang.code === lang.code
+                  ? 'border-[#1A4E84] bg-[#1A4E84]/5 text-[#1A4E84]'
+                  : 'border-slate-200 text-slate-600 hover:border-slate-300'}`}
+            >
+              <span className="text-base leading-none" aria-hidden="true">{lang.flag}</span>
+              <span className="uppercase text-xs font-bold tracking-wider">{lang.code}</span>
+            </button>
+          ))}
+        </div>
+
+        <div className="w-16 h-px bg-slate-200 my-2"></div>
+
         <div className="flex flex-col items-center gap-4">
 
           <div className="flex items-center gap-2 text-[#1A4E84] font-semibold text-lg bg-white/50 backdrop-blur-sm px-6 py-2 rounded-full border border-slate-200 shadow-sm">
@@ -98,7 +193,7 @@ const Nav = () => {
             <span>17 853 33 85</span>
           </div>
 
-          <a onClick={(e) => handleScroll(e, '#contact')} className="bg-[#1A4E84] hover:bg-[#123860] text-white px-10 py-3.5 rounded-full font-bold shadow-lg shadow-[#1A4E84]/20 cursor-pointer transition-transform hover:-translate-y-1">
+          <a onClick={(e) => handleScroll(e, '#contact')} className="bg-[#1A4E84] hover:bg-[#123860] text-white px-6 py-2.5 rounded-full font-bold shadow-lg shadow-[#1A4E84]/20 cursor-pointer transition-transform hover:-translate-y-1">
             Umów wizytę
           </a>
         </div>

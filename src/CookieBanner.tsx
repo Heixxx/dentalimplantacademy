@@ -28,7 +28,6 @@ const CookieBanner = () => {
     if (!isVisible) return null;
 
     return (
-        // position: fixed i bottom-0 trzyma go zawsze na dole ekranu (kamery), niezależnie od scrolla
         <div
             className="fixed bottom-0 left-0 w-full z-[9999] p-3 sm:p-4 lg:p-6 pointer-events-none flex justify-center overflow-hidden"
             role="dialog"

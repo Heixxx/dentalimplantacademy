@@ -37,31 +37,31 @@ const Services: React.FC = () => {
               Endodoncja
             </h3>
             
-            <p className="text-base text-slate-600 mb-6 font-light leading-relaxed relative z-10">
+            <p className="text-base md:text-lg text-slate-600 mb-6 font-light leading-relaxed relative z-10">
               Endodoncja czyli leczenie kanałowe. Głównym celem tego zabiegu jest uratowanie zęba przed usunięciem.
             </p>
 
             <div className="mt-auto relative z-10">
-                <strong className="text-slate-800 block mb-4 text-base">Kiedy jest potrzebna?</strong>
+                <strong className="text-slate-800 block mb-4 text-base md:text-lg">Kiedy jest potrzebna?</strong>
                 <ul className="space-y-3">
-                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-600 font-light">
-                        <span className="w-2 h-2 mt-2 bg-[#1A4E84] rounded-full shrink-0"></span>
+                    <li className="flex items-start gap-3 text-base md:text-lg text-slate-600 font-light">
+                        <span className="w-2 h-2 mt-2.5 bg-[#1A4E84] rounded-full shrink-0"></span>
                         Głęboka próchnica docierająca do miazgi.
                     </li>
-                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-600 font-light">
-                        <span className="w-2 h-2 mt-2 bg-[#1A4E84] rounded-full shrink-0"></span>
+                    <li className="flex items-start gap-3 text-base md:text-lg text-slate-600 font-light">
+                        <span className="w-2 h-2 mt-2.5 bg-[#1A4E84] rounded-full shrink-0"></span>
                         Silny ból zęba (samoistny lub przy nagryzaniu).
                     </li>
-                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-600 font-light">
-                        <span className="w-2 h-2 mt-2 bg-[#1A4E84] rounded-full shrink-0"></span>
+                    <li className="flex items-start gap-3 text-base md:text-lg text-slate-600 font-light">
+                        <span className="w-2 h-2 mt-2.5 bg-[#1A4E84] rounded-full shrink-0"></span>
                         Obumarła miazga (zęby „martwe”).
                     </li>
-                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-600 font-light">
-                        <span className="w-2 h-2 mt-2 bg-[#1A4E84] rounded-full shrink-0"></span>
+                    <li className="flex items-start gap-3 text-base md:text-lg text-slate-600 font-light">
+                        <span className="w-2 h-2 mt-2.5 bg-[#1A4E84] rounded-full shrink-0"></span>
                         Urazy mechaniczne (np. złamanie zęba odsłaniające nerw).
                     </li>
-                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-600 font-light">
-                        <span className="w-2 h-2 mt-2 bg-[#1A4E84] rounded-full shrink-0"></span>
+                    <li className="flex items-start gap-3 text-base md:text-lg text-slate-600 font-light">
+                        <span className="w-2 h-2 mt-2.5 bg-[#1A4E84] rounded-full shrink-0"></span>
                         Konieczność powtórnego leczenia, gdy poprzednie wypełnienie kanału było nieszczelne.
                     </li>
                 </ul>
@@ -103,35 +103,10 @@ const Services: React.FC = () => {
               Chirurgia
             </h3>
             
-            <p className="text-base text-slate-600 mb-6 font-light leading-relaxed relative z-10">
+            <p className="text-base md:text-lg text-slate-600 mb-6 font-light leading-relaxed relative z-10">
               Chirurgia stomatologiczna to dział stomatologii zajmujący się leczeniem operacyjnym w obrębie jamy ustnej. Nowoczesne metody zapewniają precyzję, bezpieczeństwo i komfort pacjenta podczas każdego zabiegu.
             </p>
 
-            <div className="mt-auto relative z-10">
-                <strong className="text-slate-800 block mb-4 text-base">Najczęstsze zabiegi:</strong>
-                <ul className="space-y-3">
-                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-600 font-light">
-                        <span className="w-2 h-2 mt-2 bg-slate-800 rounded-full shrink-0"></span>
-                        Ekstrakcja zęba.
-                    </li>
-                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-600 font-light">
-                        <span className="w-2 h-2 mt-2 bg-slate-800 rounded-full shrink-0"></span>
-                        Wszczepienie implantów.
-                    </li>
-                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-600 font-light">
-                        <span className="w-2 h-2 mt-2 bg-slate-800 rounded-full shrink-0"></span>
-                        Resekcje wierzchołków korzeni.
-                    </li>
-                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-600 font-light">
-                        <span className="w-2 h-2 mt-2 bg-slate-800 rounded-full shrink-0"></span>
-                        Sterowana regeneracja kości.
-                    </li>
-                    <li className="flex items-start gap-3 text-sm md:text-base text-slate-600 font-light">
-                        <span className="w-2 h-2 mt-2 bg-slate-800 rounded-full shrink-0"></span>
-                        Podniesienie dna zatoki szczękowej.
-                    </li>
-                </ul>
-            </div>
           </div>
 
           <div className="bg-white border border-slate-100 p-8 md:p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 group relative overflow-hidden flex flex-col h-full text-left">
