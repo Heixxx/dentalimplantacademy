@@ -13,7 +13,6 @@ const SHOWCASE_DATA: Room[] = [
   { id: 2, imageSrc: "/biuro.jpeg", title: "Poczekalnia", subtitle: "Strefa komfortu pacjenta" },
   { id: 3, imageSrc: "ludziee.jpeg", title: "Wspaniali ludzie", subtitle: "Na nich zawsze można liczyć" },
   { id: 4, imageSrc: "budynek.jpeg", title: "Budynek", subtitle: "Miejsce naszej pracy" },
-  { id: 5, imageSrc: "Doktor_biuro.jpeg", title: "Miejsce pracy Doktora", subtitle: "Specjalista naszych czasów" }
 ];
 
 const Showcase = () => {
