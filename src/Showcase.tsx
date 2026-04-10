@@ -79,8 +79,8 @@ const Showcase = () => {
         </div>
       </div>
 
-      <div className="relative w-full h-[250px] sm:h-[320px] md:h-[450px] flex items-center justify-center mt-4 md:mt-8">
-        <div className="relative w-[70%] sm:w-[60%] md:w-[50%] lg:max-w-3xl h-full flex justify-center items-center">
+      <div className="relative w-full h-[350px] sm:h-[400px] md:h-[600px] flex items-center justify-center mt-4 md:mt-8">
+        <div className="relative w-[90%] sm:w-[90%] md:w-[50%] lg:max-w-5xl h-full flex justify-center items-center">
           {SHOWCASE_DATA.map((room, index) => (
             <div 
               key={room.id}

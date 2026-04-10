@@ -204,7 +204,7 @@ const TeamGallery = () => {
 
                 <div
                     className="relative w-full flex items-center justify-center mt-4 md:mt-8"
-                    style={{ height: 'clamp(480px, 73vw, 700px)' }}
+                    style={{ height: 'clamp(580px, 73vw, 700px)' }}
                     role="region"
                     aria-roledescription="karuzela"
                     aria-label="Karuzela zespołu – użyj strzałek do nawigacji"
