@@ -31,7 +31,7 @@ const About = () => {
           <div className="text-center lg:text-left mt-16 lg:mt-0">
             <span className="text-teal font-bold tracking-widest uppercase text-xs mb-2 block">Kim jesteśmy</span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 md:mb-6">
-              Poznaj Doktora <br className="hidden sm:block" />
+              Poznaj lekarza stomatologa <br className="hidden sm:block" />
               <span className="text-primary">Dariusza Srokowskiego</span>
             </h2>
             

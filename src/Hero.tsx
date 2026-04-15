@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 
-// const IMG_THINKING = "/thinking.png";
-// const IMG_SMILING = "/smile.png";
 const adjectives = ["Precyzyjne"];
 
 const Hero = () => {
@@ -166,7 +164,7 @@ const Hero = () => {
                             <div className="bg-primary px-5 py-3 md:px-6 md:py-4 rounded-3xl relative">
                                 <div className="absolute -top-2 left-6 w-5 h-5 bg-primary transform rotate-45 rounded-sm"></div>
                                 <p className="text-white font-medium text-sm md:text-base leading-snug relative z-10">
-                                    Stomatolog z ponad 25-letnim doświadczeniem w implantologii, w Kanadzie i Polsce. <br />
+                                    Lekarz stomatolog z ponad 25-letnim doświadczeniem w implantologii, w Kanadzie i Polsce. <br />
                                     {/* <span className="font-bold text-accent">
                                         Dental Implant Academy!
                                     </span> */}

@@ -7,10 +7,8 @@ interface LangOption {
 }
 
 const LANGUAGES: LangOption[] = [
-  { code: 'pl', label: 'Polski', flag: '🇵🇱' },
-  { code: 'en', label: 'English', flag: '🇬🇧' },
-  { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
-  { code: 'uk', label: 'Українська', flag: '🇺🇦' },
+  { code: 'pl', label: 'Polski', flag: 'PL' },
+  { code: 'en', label: 'English', flag: 'EN' },
 ];
 
 const Nav = () => {
@@ -60,10 +58,10 @@ const Nav = () => {
             <img src="/logo.png" alt="Dental Implant Academy Logo" className="w-16 h-16 md:w-20 md:h-20" />
             <div>
               <h1 className="font-display font-bold text-lg md:text-xl text-[#1A4E84] uppercase tracking-wider leading-none">
-                Dental Implant
+                Dental Implant Academy
               </h1>
               <span className="text-[10px] md:text-xs text-slate-500 font-medium tracking-[0.2em] uppercase">
-                Academy - Rzeszów
+                 Rzeszów
               </span>
             </div>
           </div>

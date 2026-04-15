@@ -4,49 +4,38 @@ interface TeamMember {
     id: number;
     name: string;
     role: string;
-    description: string;
     imageSrc: string;
 }
 
 const TEAM_DATA: TeamMember[] = [
     {
         id: 0,
-        name: 'Dr lek. Dariusz Srokowski',
+        name: 'Lek. stomatolog Dariusz Srokowski',
         role: 'Lekarz stomatolog',
-        description:
-            'XXXXXXXX',
         imageSrc: '/Doctor.png',
     },
     {
         id: 1,
         name: 'Ewelina Lantenszleger',
         role: 'asystentka stomatologiczna',
-        description:
-            'XXXXXX',
         imageSrc: '/Ewelina.jpeg',
     },
     {
         id: 2,
         name: 'Kinga Szczepanik-Popeka',
         role: 'lekarz dentysta',
-        description:
-            'XXXXX',
         imageSrc: '/Kinga.jpeg',
     },
     {
         id: 3,
         name: 'Natalia Holouchanska',
         role: 'asystentka stomatologiczna',
-        description:
-            'XXXXX',
         imageSrc: '/Natalia.jpeg',
     },
     {
         id: 4,
         name: 'Nasz Zespół',
         role: 'Razem Tworzymy Uśmiechy',
-        description:
-            'XXXXXX',
         imageSrc: '/All.jpeg',
     },
 ];
@@ -256,12 +245,6 @@ const TeamGallery = () => {
                                         >
                                             {member.name}
                                         </h3>
-                                        <p
-                                            className="text-slate-200 font-light leading-relaxed line-clamp-2"
-                                            style={{ fontSize: 'clamp(0.75rem, 1.2vw, 0.9375rem)' }}
-                                        >
-                                            {member.description}
-                                        </p>
                                     </div>
                                 </div>
                             );
