@@ -7,10 +7,10 @@ const About = () => {
     <section className="w-full py-16 md:py-24 bg-slate-50 relative" id="about">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
+
           <div className="relative group mx-auto w-full max-w-md lg:max-w-none pt-4">
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
-            
+
             <div className="relative rounded-2xl overflow-hidden shadow-2xl transform lg:rotate-2 group-hover:rotate-0 transition duration-500 aspect-square max-w-md mx-auto">
               <img alt="Lekarz stomatolog Derek Srokowski" className="object-cover object-left w-full h-full" src={IMG_DOCTOR} />
             </div>
@@ -27,18 +27,24 @@ const About = () => {
               <p className="text-xs text-slate-500">Członek RCDSO</p>
             </div>
           </div>
-          
+
           <div className="text-center lg:text-left mt-16 lg:mt-0">
             <span className="text-teal font-bold tracking-widest uppercase text-xs mb-2 block">Kim jesteśmy</span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 md:mb-6">
               Poznaj lekarza stomatologa <br className="hidden sm:block" />
               <span className="text-primary">Dariusza Srokowskiego</span>
             </h2>
-            
+
             <p className="text-slate-600 mb-6 md:mb-8 leading-relaxed text-sm md:text-base font-light">
-              Lekarz stomatolog Dariusz Srokowski to absolwent wydziału stomatologii University of Western Ontario w Kanadzie, który ukończył w 1987 roku. Posiada wieloletnie doświadczenie w prowadzeniu klinik w Polsce oraz Kanadzie. W latach 1993-1996 pracował jako asystent profesora na wydziale protetyki uniwersytetu Western Ontario. Od wielu lat kieruje prywatną kliniką specjalizującą się w zaawansowanej rekonstrukcji uzębienia i implantologii.
+              Lekarz stomatolog Dariusz Srokowski to absolwent wydziału stomatologii
+              Uniwersytetu Western Ontario w Kanadzie, który ukończył w 1987 roku. W latach
+              1993-1996 pracował jako asystent profesora na wydziale protetyki uniwersytetu
+              Western Ontario, jednocześnie założył swój pierwszy gabinet specjalizujący się w
+              implantologii oraz zaawansowanej rekonstrukcji szczęki na implantach oraz
+              stomatologii. Od ponad 25 lat przyjmuje pacjentów w Dental Implant Academy w
+              Rzeszowie, pracuje zarówno w Kanadzie jak i w Polsce.
             </p>
-            
+
             <ul className="space-y-4 mb-8 text-left inline-block lg:block">
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-teal text-xl">check_circle</span>
@@ -55,12 +61,12 @@ const About = () => {
             </ul>
 
             <div className="text-center lg:text-left">
-               <a className="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="#services">
-                 Zobacz nasze usługi <span className="material-symbols-outlined text-sm">arrow_forward</span>
-               </a>
+              <a className="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="#services">
+                Zobacz nasze usługi <span className="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
             </div>
           </div>
-          
+
         </div>
       </div>
     </section>

@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 
+import IMG_THINKING from "/tommy.jpg";
+import IMG_SMILING from "/tommy-van.jpg";
+
 const adjectives = ["Precyzyjne"];
 
 const Hero = () => {
@@ -189,11 +192,11 @@ const Hero = () => {
                                     className="absolute inset-0 w-full h-full rounded-[2rem] shadow-2xl border-4 border-white overflow-hidden bg-slate-100"
                                     style={{ backfaceVisibility: "hidden" }}
                                 >
-                                    {/* <img
+                                    <img
                                         alt="Pacjentka zastanawiająca się"
                                         className="w-full h-full object-cover object-center"
                                         src={IMG_THINKING}
-                                    /> */}
+                                    />
                                 </div>
 
                                 <div
@@ -203,11 +206,11 @@ const Hero = () => {
                                         transform: "rotateY(180deg)",
                                     }}
                                 >
-                                    {/* <img
+                                    <img
                                         alt="Pacjentka uśmiechnięta"
-                                        className="w-full h-full object-cover object-top"
+                                        className="w-full h-full object-cover object-center"
                                         src={IMG_SMILING}
-                                    /> */}
+                                    />
                                 </div>
                             </div>
                         </div>

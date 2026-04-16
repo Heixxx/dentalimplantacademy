@@ -16,34 +16,46 @@ const FAQ_DATA: FaqCard[] = [
   {
     id: 0,
     icon: 'help_clinic',
-    title: 'Pierwsza wizyta i przygotowanie',
+    title: 'Najczęściej zadawane pytania',
     items: [
       {
-        subtitle: 'Jak wygląda pierwsza wizyta?',
-        text: '--------------',
+        subtitle: 'Czy z implantów zębowych mogą skorzystać osoby w każdym wieku?',
+        text: 'Tak. Nie ma tutaj praktycznie żadnych ograniczeń. Jedynym przeciwwskazaniem do wykonania zabiegu implantacji jest wiek poniżej 17. roku życia ze względu na fakt, że w tym wieku trwa wciąż proces rozwoju kości. Innymi przeciwwskazaniami mogą być ogólne problemy zdrowotne.',
       },
       {
-        subtitle: 'Czy muszę się jakoś przygotować?',
-        text: '--------------',
+        subtitle: 'Czy zabieg wszczepienia implantu boli?',
+        text: 'Zabieg przeprowadza się w znieczuleniu miejscowym, dlatego jest on bezbolesny. Pacjent może odczuwać lekki dyskomfort po ustąpieniu znieczulenia lub opuchliznę, ale jest to naturalny proces gojenia.',
       },
       {
-        subtitle: 'Ile trwa konsultacja?',
-        text: '--------------',
+        subtitle: 'Jak długo trwa proces leczenia?',
+        text: 'Sam zabieg wszczepienia jednego implantu trwa zazwyczaj od 20 do 60 minut. Pełna integracja implantu z kością (zrośnięcie) trwa zazwyczaj od 3 do 6 miesięcy, po czym nakładana jest korona protetyczna.',
+      },
+      {
+        subtitle: 'Czy implanty zębowe trzeba wymieniać?',
+        text: 'Implanty są traktowane jako rozwiązanie długoterminowe, a nawet dożywotnie, jeśli są prawidłowo pielęgnowane. Wymagana jest jednak wzorowa higiena jamy ustnej i regularne wizyty kontrolne (co 6-12 miesięcy).',
+      },
+      {
+        subtitle: 'Czy organizm może odrzucić implant?',
+        text: 'Ryzyko odrzucenia (nieprzyjęcia się) implantu jest niewielkie i wynosi zazwyczaj poniżej 2-5%. Najczęstsze przyczyny to palenie tytoniu, zła higiena, infekcje lub zbyt mała ilość kości.',
+      },
+      {
+        subtitle: 'Jak dbać o implanty po zabiegu?',
+        text: 'Przez pierwsze dni należy unikać gorących potraw, intensywnego wysiłku oraz palenia tytoniu. Niezbędne jest stosowanie zaleconych leków przeciwbólowych i zimnych okładów.',
       },
     ],
   },
   {
     id: 1,
     icon: 'payments',
-    title: 'Koszty i finansowanie leczenia',
+    title: 'Bezpieczeństwo i koszty',
     items: [
       {
-        subtitle: 'Czy konsultacja jest bezpłatna?',
-        text: '--------------',
+        subtitle: 'Czy implanty są bezpieczne?',
+        text: 'Poprawnie wstawiony implant nie stanowi dla pacjenta zagrożenia. Implanty są wykonane z tytanu, który jest materiałem biokompatybilnym i dobrze tolerowanym przez organizm. Oczywiście, jak każda procedura medyczna, implantacja wiąże się z pewnym ryzykiem, takim jak infekcje czy problemy z gojeniem, jednak prawidłowo przeprowadzona procedura i staranna opieka pooperacyjna minimalizują zagrożenie, sprowadzając je niemal do zera.',
       },
       {
-        subtitle: 'Jakie formy płatności akceptujecie?',
-        text: '--------------',
+        subtitle: 'Ile kosztują implanty zębowe?',
+        text: 'Koszt wszczepienia jednego implanta to 3.700 zł, a koszt pojedynczej korony na tym implancie to 3.300 zł.',
       },
     ],
   },
