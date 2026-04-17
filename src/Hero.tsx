@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-import IMG_THINKING from "/tommy.jpg";
-import IMG_SMILING from "/tommy-van.jpg";
+import IMG_THINKING from "/tommy.png";
+import IMG_SMILING from "/tommy-van.png";
 
 const adjectives = ["Precyzyjne"];
 
