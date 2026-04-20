@@ -158,7 +158,7 @@ const Hero = () => {
                         </div>
 
                         <div
-                            className={`absolute bottom-10 lg:bottom-24 -right-2 lg:-right-12 z-30 transition-all duration-700 ease-out max-w-[220px] md:max-w-[260px] animate-float-bubble drop-shadow-xl ${showSecondBubble
+                            className={`absolute bottom-1 lg:bottom-24 -right-2 lg:-right-12 z-30 transition-all duration-700 ease-out max-w-[220px] md:max-w-[260px] animate-float-bubble drop-shadow-xl ${showSecondBubble
                                 ? "opacity-100 scale-100 translate-y-0"
                                 : "opacity-0 scale-50 translate-y-10"
                                 }`}
