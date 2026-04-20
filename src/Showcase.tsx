@@ -54,7 +54,7 @@ const Showcase = () => {
   };
 
   return (
-    <section className="w-full py-16 md:py-24 bg-slate-50 overflow-hidden relative" id="showcase">
+    <section className="w-full py-16 md:py-24 bg-slate-50 overflow-hidden relative scroll-mt-24" id="showcase">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 md:mb-12 flex flex-col md:flex-col justify-center items-center md:items-end gap-6 text-center">
         <div className='text-center w-full'>
           <span className="text-teal font-bold tracking-widest uppercase text-xs md:text-sm block mb-1">Infrastruktura</span>

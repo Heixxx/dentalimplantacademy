@@ -2,7 +2,7 @@ import React from 'react';
 
 const Services: React.FC = () => {
   return (
-    <section className="w-full py-16 md:py-24 bg-slate-50 relative overflow-hidden" id="services">
+    <section className="w-full py-16 md:py-24 bg-slate-50 relative overflow-hidden scroll-mt-24" id="services">
       <div className="absolute top-0 right-0 w-full lg:w-1/3 h-full bg-white -z-10 skew-x-12 transform origin-top-right hidden lg:block border-l border-slate-100"></div>
       
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

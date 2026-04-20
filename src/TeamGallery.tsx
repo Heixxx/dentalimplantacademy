@@ -131,7 +131,7 @@ const TeamGallery = () => {
         <>
 
             <section
-                className="w-full pt-16 pb-12 md:pt-24 md:pb-16 bg-white relative overflow-hidden"
+                className="w-full pt-16 pb-12 md:pt-24 md:pb-16 bg-white relative overflow-hidden scroll-mt-24"
                 id="team"
                 aria-labelledby="team-heading"
             >

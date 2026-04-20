@@ -1,7 +1,7 @@
 
 const Contact = () => {
   return (
-    <section className="w-full bg-white pt-12 pb-16 md:pb-24" id="contact">
+    <section className="w-full bg-white pt-12 pb-16 md:pb-24 scroll-mt-24" id="contact">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="bg-slate-50 border border-slate-100 rounded-[2rem] overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-5">
 

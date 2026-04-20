@@ -2,7 +2,7 @@ import React from 'react';
 
 const ImplantEducation: React.FC = () => {
     return (
-        <section className="relative w-full py-20 bg-white" id="implanty">
+        <section className="relative w-full py-20 bg-white scroll-mt-24" id="implanty">
 
             <style>{`
                 .led-green-implant {

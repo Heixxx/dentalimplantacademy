@@ -34,7 +34,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <section className="relative w-full min-h-[90vh] flex items-center bg-white pt-20 pb-20 overflow-x-clip">
+        <section className="relative w-full min-h-[90vh] flex items-center bg-white pt-20 pb-20 overflow-x-clip scroll-mt-24" id="top">
             <style>{`
         .led-green {
           width: 8px;

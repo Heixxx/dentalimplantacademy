@@ -69,7 +69,7 @@ const Faq = () => {
 
   return (
     <section
-      className="w-full py-16 md:py-24 bg-slate-50 relative overflow-hidden"
+      className="w-full py-16 md:py-24 bg-slate-50 relative overflow-hidden scroll-mt-24"
       id="faq"
       aria-labelledby="faq-heading"
     >
