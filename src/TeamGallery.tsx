@@ -22,7 +22,7 @@ const TEAM_DATA: TeamMember[] = [
     },
     {
         id: 2,
-        name: 'Kinga Szczepanik-Popeka',
+        name: 'Kinga Szczepanik-Popek',
         role: 'lekarz dentysta',
         imageSrc: '/Kinga.jpeg',
     },

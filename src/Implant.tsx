@@ -74,7 +74,7 @@ const ImplantEducation: React.FC = () => {
                             <h3 className="font-display text-3xl lg:text-4xl font-bold text-slate-800">Czym są implanty zębowe?</h3>
                             <div className="text-slate-600 font-light leading-relaxed text-base md:text-lg lg:text-xl space-y-4">
                                 <p>
-                                    Implant zębowy to sztuczny korzeń, wykonany najczęściej z tytanu lub cyrkonu, który jest wprowadzany do kości szczęki lub żuchwy. Stanowi stabilną bazę dla odbudowy protetycznej, takiej jak korona, most lub proteza. Implanty są trwałe i umożliwiają odzyskanie pełnej funkcji zęba, zarówno pod względem estetycznym, jak i funkcjonalnym.
+                                    Implant zębowy to sztuczny korzeń, wykonany najczęściej z tytanu, który jest wprowadzany do kości szczęki lub żuchwy. Stanowi stabilną bazę dla odbudowy protetycznej, takiej jak korona, most lub proteza. Implanty są trwałe i umożliwiają odzyskanie pełnej funkcji zęba, zarówno pod względem estetycznym, jak i funkcjonalnym.
                                 </p>
                                 <p>
                                     Pełnią one rolę sztucznego korzenia, który po wszczepieniu w kość szczęki lub żuchwy zrasta się z nią. Dla wielu pacjentów to szansa na odzyskanie pewności siebie, pięknego uśmiechu oraz pełnej funkcjonalności jamy ustnej.
@@ -137,7 +137,7 @@ const ImplantEducation: React.FC = () => {
                                     <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-sky-50 text-[#1A4E84] flex items-center justify-center font-bold text-lg border border-sky-100 group-hover:bg-[#1A4E84] group-hover:text-white transition-all duration-300 shadow-sm">1</div>
                                     <div className="pt-1">
                                         <h5 className="text-lg md:text-xl font-bold mb-1 text-slate-800 group-hover:text-[#1A4E84] transition-colors duration-300">Implant</h5>
-                                        <p className="text-slate-600 font-light leading-relaxed text-base md:text-lg">Niewielki element wszczepiany w kość, najczęściej wykonany z tytanu lub cyrkonu.</p>
+                                        <p className="text-slate-600 font-light leading-relaxed text-base md:text-lg">Niewielki element wszczepiany w kość, najczęściej wykonany z tytanu.</p>
                                     </div>
                                 </div>
                                 <div className="flex gap-4 group cursor-default">
