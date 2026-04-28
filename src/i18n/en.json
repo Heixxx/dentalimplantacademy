@@ -108,11 +108,11 @@
     "carouselRole": "carousel",
     "carouselLabel": "Team carousel – use arrow keys to navigate",
     "members": [
-      { "name": "Dr. Dariusz Srokowski", "role": "Dental surgeon" },
+      { "name": "Dr. Dariusz Srokowski", "role": "Dentist" },
       { "name": "Ewelina Lantenszleger", "role": "Dental assistant" },
       { "name": "Kinga Szczepanik-Popek", "role": "Dentist" },
       { "name": "Natalia Holouchanska", "role": "Dental assistant" },
-      { "name": "Our Team", "role": "Together We Create Smiles" }
+      { "name": "Our Team", "role": "Creating Smiles Together" }
     ]
   },
   "showcase": {
@@ -123,11 +123,11 @@
     "prevLabel": "Previous",
     "nextLabel": "Next",
     "rooms": [
-      { "title": "Treatment Room", "subtitle": "Comfortable chair and vast experience" },
-      { "title": "Surgical Suite", "subtitle": "Precision instruments" },
-      { "title": "Waiting Room", "subtitle": "Patient comfort zone" },
-      { "title": "Wonderful people", "subtitle": "Always there for you" },
-      { "title": "Building", "subtitle": "Where we work" }
+      { "title": "Treatment Room", "subtitle": "Comfortable Chair and Extensive Experience" },
+      { "title": "Surgical Suite", "subtitle": "Precision Instruments" },
+      { "title": "Waiting Area", "subtitle": "Patient Comfort Zone" },
+      { "title": "Wonderful People You Can Count On", "subtitle": "Always There for You" },
+      { "title": "The Building", "subtitle": "Our Workplace" }
     ]
   },
   "faq": {
