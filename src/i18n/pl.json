@@ -1,0 +1,192 @@
+{
+  "nav": {
+    "informacje": "Informacje",
+    "galerie": "Galerie",
+    "items": {
+      "about": "O nas",
+      "implanty": "Implanty",
+      "services": "Usługi",
+      "faq": "FAQ",
+      "team": "Zespół",
+      "showcase": "Klinika"
+    },
+    "contact": "Kontakt",
+    "bookAppointment": "Umów wizytę",
+    "ariaNavPanel": "sekcje na stronie",
+    "ariaLangLabel": "Zmień język – aktualny:",
+    "ariaSelectLang": "Wybierz język",
+    "ariaChangeLangTo": "Zmień język na",
+    "ariaToggleMenu": "Przełącz menu"
+  },
+  "hero": {
+    "badge": "Nowi pacjenci mile widziani",
+    "adjective": "Precyzyjne",
+    "headline1": "Tworzymy",
+    "headline2": "Uśmiechy",
+    "description": "Doświadcz przyszłości stomatologii rekonstrukcyjnej. Łączymy elitarną wiedzę chirurgiczną, nowoczesną technologię i empatię, aby przywrócić Twoją pewność siebie.",
+    "cta": "Umów Konsultację",
+    "bubble1": "Komfort i uśmiech?",
+    "bubble2": "Lekarz stomatolog z ponad 25-letnim doświadczeniem w implantologii, w Kanadzie i Polsce.",
+    "imgThinkingAlt": "Pacjentka zastanawiająca się",
+    "imgSmilingAlt": "Pacjentka uśmiechnięta"
+  },
+  "about": {
+    "tag": "Kim jesteśmy",
+    "heading": "Poznaj lekarza stomatologa",
+    "headingName": "Dariusza Srokowskiego",
+    "bio": "Lekarz stomatolog Dariusz Srokowski to absolwent wydziału stomatologii Uniwersytetu Western Ontario w Kanadzie, który ukończył w 1987 roku. W latach 1993-1996 pracował jako asystent profesora na wydziale protetyki uniwersytetu Western Ontario, jednocześnie założył swój pierwszy gabinet specjalizujący się w implantologii oraz zaawansowanej rekonstrukcji szczęki na implantach oraz stomatologii. Od ponad 25 lat przyjmuje pacjentów w Dental Implant Academy w Rzeszowie, pracuje zarówno w Kanadzie jak i w Polsce.",
+    "check1": "Bezpłatna konsultacja",
+    "check2": "Diagnostyka na miejscu",
+    "check3": "Plan leczenia i finansowania",
+    "link": "Zobacz nasze usługi",
+    "clinics": "Kliniki",
+    "clinicsVal": "Kanada & Rzeszów",
+    "cert": "Certyfikaty",
+    "certVal": "Członek RCDSO",
+    "imgAlt": "Lekarz stomatolog Derek Srokowski"
+  },
+  "implant": {
+    "badge": "Kompleksowa Opieka",
+    "heading": "Poznaj możliwości",
+    "headingHighlight": "nowoczesnej stomatologii.",
+    "p1": "Utrata zębów, niezależnie od przyczyny, znacząco wpływa na komfort życia, pewność siebie oraz zdrowie jamy ustnej bez względu na wiek. Implantologia, jest jedną z najnowocześniejszych dziedzin stomatologii, oferuje trwałe i estetyczne rozwiązania dla osób, które chcą odzyskać uśmiech i komfort przy spożywaniu posiłków.",
+    "p2": "Dzięki dynamicznemu rozwojowi technologii implantologicznych i doświadczeniu lekarza D. Srokowskiego, który od ponad dwudziestu pięciu lat prowadzi prywatny gabinet w Kanadzie oraz w Polsce. Pacjenci Dental Implant Academy mają dostęp do innowacyjnych metod odbudowy zębów, które są funkcjonalne i wyglądają naturalnie.",
+    "whatTitle": "Czym są implanty zębowe?",
+    "whatP1": "Implant zębowy to sztuczny korzeń, wykonany najczęściej z tytanu lub cyrkonu, który jest wprowadzany do kości szczęki lub żuchwy. Stanowi stabilną bazę dla odbudowy protetycznej, takiej jak korona, most lub proteza. Implanty są trwałe i umożliwiają odzyskanie pełnej funkcji zęba, zarówno pod względem estetycznym, jak i funkcjonalnym.",
+    "whatP2": "Pełnią one rolę sztucznego korzenia, który po wszczepieniu w kość szczęki lub żuchwy zrasta się z nią. Dla wielu pacjentów to szansa na odzyskanie pewności siebie, pięknego uśmiechu oraz pełnej funkcjonalności jamy ustnej.",
+    "stepsTitle": "Etapy wszczepienia implantów",
+    "step1Title": "Konsultacja",
+    "step1Text": "Pierwsza konsultacja może odbyć się na podstawie nadesłanego przez pacjenta badania prześwietlania panoramicznego, jednak decyzje i zaplanowanie leczenia odbywa się podczas wizyty w gabinecie, podczas której lekarz przeprowadza szczegółową ocenę stanu jamy ustnej oraz ilości kości, co jest szczególnie ważne w przypadku osób które straciły zęby dużo wcześniej. W takiej sytuacji możliwy jest zabieg regeneracji kości lub podniesienie dna zatoki szczękowej.",
+    "step2Title": "Zaplanowanie leczenia",
+    "step2Text": "Na podstawie przeprowadzonego badania lekarz stomatolog przedstawi pacjentowi plan przeprowadzenia zabiegu implantologicznego, który będzie się składał z kilku etapów. Zabieg wszczepienia implantu wykonywany jest z miejscowym znieczuleniem, aby pacjent nie odczuwał bólu czy dyskomfortu. Po wprowadzeniu implantu rozpoczyna się proces gojenia tkanki kostnej, co może potrwać około 3-4 miesięcy. Na ten okres lekarz nakłada na implant (element wszczepiony w kość) mikroprotezę lub ząb tymczasowy w zależności ile implantów zostanie wszczepionych podczas zabiegu.\n\nW trakcie gojenia pacjent przychodzi na kontrolę, aby na podstawie prześwietlenia RTG lekarz ocenił, czy implant goi się poprawnie.\n\nOstatnim etapem jest nasadzenie korony protetycznej imitującej naturalny ząb, która będzie dobrana kolorystycznie do reszty uzębienia.",
+    "step3Title": "Opieka po wszczepieniu implantu",
+    "step3Text": "Wskazane jest, aby pacjent po wszczepieniu implantu, przychodził na higienizację raz do roku w ramach profilaktyki.",
+    "partsTitle": "Części implantu",
+    "part1Title": "Implant",
+    "part1Text": "Niewielki element wszczepiany w kość, najczęściej wykonany z tytanu lub cyrkonu.",
+    "part2Title": "Łącznik",
+    "part2Text": "Element łączący implant z widoczną częścią zęba.",
+    "part3Title": "Korona protetyczna",
+    "part3Text": "Widoczna część imitująca naturalny ząb, odpowiednio dobrana kolorystycznie do reszty uzębienia.",
+    "advantagesTitle": "Główne zalety",
+    "adv1Title": "Trwałość",
+    "adv1Text": "przy odpowiedniej dbałości o higienę mogą służyć całe życie.",
+    "adv2Title": "Komfort",
+    "adv2Text": "zachowują się jak naturalne zęby, eliminując dyskomfort związany z ruchomymi protezami.",
+    "adv3Title": "Zdrowe kości",
+    "adv3Text": "zapobiegają zanikowi kości w miejscu po utraconym zębie, co jest kluczowe dla zachowania rysów twarzy.",
+    "imgAlt": "Schemat budowy implantu stomatologicznego"
+  },
+  "services": {
+    "tag": "Pełen Zakres Usług",
+    "heading": "Dbamy o zdrowie od podstaw",
+    "sub": "Niezależnie od problemu, z którym się do nas zgłaszaszasz, dysponujemy wiedzą i sprzętem, aby przeprowadzić Cię przez każdy etap leczenia.",
+    "endoTitle": "Endodoncja",
+    "endoDesc": "Endodoncja czyli leczenie kanałowe. Głównym celem tego zabiegu jest uratowanie zęba przed usunięciem.",
+    "endoWhen": "Kiedy jest potrzebna?",
+    "endo1": "Głęboka próchnica docierająca do miazgi.",
+    "endo2": "Silny ból zęba (samoistny lub przy nagryzaniu).",
+    "endo3": "Obumarła miażga (zęby \"martwe\").",
+    "endo4": "Urazy mechaniczne (np. złamanie zęba odsłaniające nerw).",
+    "endo5": "Konieczność powtórnego leczenia, gdy poprzednie wypełnienie kanału było nieszczelne.",
+    "conservTitle": "Stomatologia zachowawcza",
+    "conservDesc1": "Stomatologia zachowawcza zajmuje się rozpoznawaniem i leczeniem próchnicy oraz odbudową zniszczonych przez tę chorobę zębów. Niezwykle ważne jest to, aby zmiany próchnicowe usuwać w jak najwcześniejszym stadium, dzięki czemu leczenie jest proste, mało inwazyjne i tańsze.",
+    "conservDesc2": "Dlatego kwestią olbrzymiej wagi są regularne kontrole stanu zębów (najlepiej co 6 miesięcy), które pozwolą na wczesną diagnozę i szybkie podjęcie leczenia.",
+    "surgTitle": "Chirurgia",
+    "surgDesc": "Chirurgia stomatologiczna to dział stomatologii zajmujący się leczeniem operacyjnym w obrębie jamy ustnej. Nowoczesne metody zapewniają precyzję, bezpieczeństwo i komfort pacjenta podczas każdego zabiegu.",
+    "prevTitle": "Profilaktyka",
+    "prevDesc1": "Profilaktyka stomatologiczna to działania zapobiegające chorobom jamy ustnej – klucz do zdrowego uśmiechu. Obejmuje regularne wizyty kontrolne, profesjonalne czyszczenie zębów, usuwanie kamienia nazębnego oraz edukację w zakresie higieny jamy ustnej.",
+    "prevDesc2": "Dzięki niej można zapobiegać próchnicy i chorobom dziąseł, dbając o długotrwałe zdrowie zębów."
+  },
+  "team": {
+    "tag": "Nasz Zespół",
+    "heading": "Poznaj naszych specjalistów",
+    "prevLabel": "Poprzedni",
+    "nextLabel": "Następny",
+    "carouselRole": "karuzela",
+    "carouselLabel": "Karuzela zespołu – użyj strzałek do nawigacji",
+    "members": [
+      { "name": "Lek. stomatolog Dariusz Srokowski", "role": "Lekarz stomatolog" },
+      { "name": "Ewelina Lantenszleger", "role": "asystentka stomatologiczna" },
+      { "name": "Kinga Szczepanik-Popeka", "role": "lekarz dentysta" },
+      { "name": "Natalia Holouchanska", "role": "asystentka stomatologiczna" },
+      { "name": "Nasz Zespół", "role": "Razem Tworzymy Uśmiechy" }
+    ]
+  },
+  "showcase": {
+    "tag": "Infrastruktura",
+    "heading": "Nasza Klinika",
+    "prevLabel": "Poprzednia galeria",
+    "nextLabel": "Następna galeria",
+    "rooms": [
+      { "title": "Gabinet", "subtitle": "Wygodny fotel i ogromne doświadczenie" },
+      { "title": "Blok Chirurgiczny", "subtitle": "Precyzyjne narzędzia" },
+      { "title": "Poczekalnia", "subtitle": "Strefa komfortu pacjenta" },
+      { "title": "Wspaniali ludzie", "subtitle": "Na nich zawsze można liczyć" },
+      { "title": "Budynek", "subtitle": "Miejsce naszej pracy" }
+    ]
+  },
+  "faq": {
+    "tag": "FAQ",
+    "heading": "Najczęściej Zadawane",
+    "headingHighlight": "Pytania",
+    "sub": "Zebraliśmy odpowiedzi na pytania, które słyszymy najczęściej. Kliknij wybrany temat, aby dowiedzieć się więcej.",
+    "cards": [
+      {
+        "title": "Najczęściej zadawane pytania",
+        "icon": "help_clinic",
+        "items": [
+          { "subtitle": "Czy z implantów zębowych mogą skorzystać osoby w każdym wieku?", "text": "Tak. Nie ma tutaj praktycznie żadnych ograniczeń. Jedynym przeciwwskazaniem do wykonania zabiegu implantacji jest wiek poniżej 17. roku życia ze względu na fakt, że w tym wieku trwa wciąż proces rozwoju kości. Innymi przeciwwskazaniami mogą być ogólne problemy zdrowotne." },
+          { "subtitle": "Czy zabieg wszczepienia implantu boli?", "text": "Zabieg przeprowadza się w znieczuleniu miejscowym, dlatego jest on bezbolesny. Pacjent może odczuwać lekki dyskomfort po ustąpieniu znieczulenia lub opuchliznę, ale jest to naturalny proces gojenia." },
+          { "subtitle": "Jak długo trwa proces leczenia?", "text": "Sam zabieg wszczepienia jednego implantu trwa zazwyczaj od 20 do 60 minut. Pełna integracja implantu z kością (zrośnięcie) trwa zazwyczaj od 3 do 6 miesięcy, po czym nakładana jest korona protetyczna." },
+          { "subtitle": "Czy implanty zębowe trzeba wymieniać?", "text": "Implanty są traktowane jako rozwiązanie długoterminowe, a nawet dożywotnie, jeśli są prawidłowo pielęgnowane. Wymagana jest jednak wzorowa higiena jamy ustnej i regularne wizyty kontrolne (co 6-12 miesięcy)." },
+          { "subtitle": "Czy organizm może odrzucić implant?", "text": "Ryzyko odrzucenia (nieprzyjęcia się) implantu jest niewielkie i wynosi zazwyczaj poniżej 2-5%. Najczęstsze przyczyny to palenie tytoniu, zła higiena, infekcje lub zbyt mała ilość kości." },
+          { "subtitle": "Jak dbać o implanty po zabiegu?", "text": "Przez pierwsze dni należy unikać gorących potraw, intensywnego wysiłku oraz palenia tytoniu. Niezbędne jest stosowanie zaleconych leków przeciwbólowych i zimnych okładów." }
+        ]
+      },
+      {
+        "title": "Bezpieczeństwo i koszty",
+        "icon": "payments",
+        "items": [
+          { "subtitle": "Czy implanty są bezpieczne?", "text": "Poprawnie wstawiony implant nie stanowi dla pacjenta zagrożenia. Implanty są wykonane z tytanu, który jest materiałem biokompatybilnym i dobrze tolerowanym przez organizm. Oczywiście, jak każda procedura medyczna, implantacja wiąże się z pewnym ryzykiem, takim jak infekcje czy problemy z gojeniem, jednak prawidłowo przeprowadzona procedura i staranna opieka pooperacyjna minimalizują zagrożenie, sprowadzając je niemal do zera." },
+          { "subtitle": "Ile kosztują implanty zębowe?", "text": "Koszt wszczepienia jednego implanta to 3.700 zł, a koszt pojedynczej korony na tym implancie to 3.300 zł." }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Skontaktuj się z nami",
+    "sub": "Jesteśmy otwarci na nowych pacjentów. Zadzwoń do nas, aby ustalić dogodny termin konsultacji.",
+    "callLabel": "Zadzwoń do nas",
+    "waLabel": "WhatsApp",
+    "addressLabel": "Odwiedź nas",
+    "hoursLabel": "Godziny przyjęć",
+    "hours": "Poniedziałek - Piątek:",
+    "address": "ul. Księdza Jałowego 8/1,\n35-010 Rzeszów",
+    "mapTitle": "Lokalizacja Kliniki Rzeszów",
+    "infoTitle": "Zapisy telefoniczne",
+    "infoText": "Prosimy o kontakt w celu umówienia wizyty przed przybyciem do kliniki."
+  },
+  "footer": {
+    "tagline": "Dedykowani perfekcji w dziedzinie implantologii i stomatologii rekonstrukcyjnej. Twój uśmiech to nasza wizytówka.",
+    "navTitle": "Nawigacja",
+    "nav1": "O naszej Klinice",
+    "nav2": "Wszystko o implantach",
+    "nav3": "Nasze Usługi",
+    "hoursTitle": "Godziny otwarcia",
+    "monFri": "Pon - Pt:",
+    "sat": "Sobota:",
+    "sun": "Niedziela:",
+    "closed": "Zamknięte",
+    "contactTitle": "Szybki Kontakt",
+    "contactSub": "Umów się na wizytę lub zadaj pytanie.",
+    "rights": "Wszelkie prawa zastrzeżone."
+  },
+  "cookie": {
+    "ariaLabel": "Informacja o plikach cookies",
+    "title": "Ta strona korzysta z plików cookies",
+    "text": "Używamy niezbędnych plików cookies do prawidłowego działania serwisu. Opcjonalne cookies (analityczne) pomagają nam ulepszyć stronę poprzez analizę ruchu. Klikając 'Akceptuj wszystkie', wyrażasz zgodę na przetwarzanie opcjonalnych cookies. Wybierając 'Tylko niezbędne', korzystamy wyłącznie z cookies technicznych. Zgodę możesz wycofać w dowolnym momencie, czyszcząc dane przeglądarki.",
+    "necessary": "Tylko niezbędne",
+    "acceptAll": "Akceptuj wszystkie"
+  }
+}

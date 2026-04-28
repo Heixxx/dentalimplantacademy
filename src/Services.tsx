@@ -1,6 +1,8 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Services: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section className="w-full py-16 md:py-24 bg-slate-50 relative overflow-hidden scroll-mt-24" id="services">
       <div className="absolute top-0 right-0 w-full lg:w-1/3 h-full bg-white -z-10 skew-x-12 transform origin-top-right hidden lg:block border-l border-slate-100"></div>
@@ -10,13 +12,13 @@ const Services: React.FC = () => {
 
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <span className="text-[#1A4E84] font-bold tracking-widest uppercase text-xs md:text-sm bg-blue-50 px-4 py-1.5 rounded-full border border-blue-100">
-            Pełen Zakres Usług
+            {t('services.tag')}
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mt-6 mb-4">
-            Dbamy o zdrowie od podstaw
+            {t('services.heading')}
           </h2>
           <p className="text-slate-600 text-base md:text-lg font-light leading-relaxed">
-            Niezależnie od problemu, z którym się do nas zgłaszaszasz, dysponujemy wiedzą i sprzętem, aby przeprowadzić Cię przez każdy etap leczenia.
+            {t('services.sub')}
           </p>
         </div>
         
@@ -38,31 +40,31 @@ const Services: React.FC = () => {
             </h3>
             
             <p className="text-base md:text-lg text-slate-600 mb-6 font-light leading-relaxed relative z-10">
-              Endodoncja czyli leczenie kanałowe. Głównym celem tego zabiegu jest uratowanie zęba przed usunięciem.
+              {t('services.endoDesc')}
             </p>
 
             <div className="mt-auto relative z-10">
-                <strong className="text-slate-800 block mb-4 text-base md:text-lg">Kiedy jest potrzebna?</strong>
+                <strong className="text-slate-800 block mb-4 text-base md:text-lg">{t('services.endoWhen')}</strong>
                 <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-base md:text-lg text-slate-600 font-light">
                         <span className="w-2 h-2 mt-2.5 bg-[#1A4E84] rounded-full shrink-0"></span>
-                        Głęboka próchnica docierająca do miazgi.
+                        {t('services.endo1')}
                     </li>
                     <li className="flex items-start gap-3 text-base md:text-lg text-slate-600 font-light">
                         <span className="w-2 h-2 mt-2.5 bg-[#1A4E84] rounded-full shrink-0"></span>
-                        Silny ból zęba (samoistny lub przy nagryzaniu).
+                        {t('services.endo2')}
                     </li>
                     <li className="flex items-start gap-3 text-base md:text-lg text-slate-600 font-light">
                         <span className="w-2 h-2 mt-2.5 bg-[#1A4E84] rounded-full shrink-0"></span>
-                        Obumarła miazga (zęby „martwe”).
+                        {t('services.endo3')}
                     </li>
                     <li className="flex items-start gap-3 text-base md:text-lg text-slate-600 font-light">
                         <span className="w-2 h-2 mt-2.5 bg-[#1A4E84] rounded-full shrink-0"></span>
-                        Urazy mechaniczne (np. złamanie zęba odsłaniające nerw).
+                        {t('services.endo4')}
                     </li>
                     <li className="flex items-start gap-3 text-base md:text-lg text-slate-600 font-light">
                         <span className="w-2 h-2 mt-2.5 bg-[#1A4E84] rounded-full shrink-0"></span>
-                        Konieczność powtórnego leczenia, gdy poprzednie wypełnienie kanału było nieszczelne.
+                        {t('services.endo5')}
                     </li>
                 </ul>
             </div>
@@ -79,13 +81,13 @@ const Services: React.FC = () => {
             </div>
             
             <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900 mb-4 relative z-10">
-              Stomatologia zachowawcza
+              {t('services.conservTitle')}
             </h3>
             
             <p className="text-base md:text-lg text-slate-600 font-light leading-relaxed relative z-10 space-y-4">
-                <span>Stomatologia zachowawcza zajmuje się rozpoznawaniem i leczeniem próchnicy oraz odbudową zniszczonych przez tę chorobę zębów. Niezwykle ważne jest to, aby zmiany próchnicowe usuwać w jak najwcześniejszym stadium, dzięki czemu leczenie jest proste, mało inwazyjne i tańsze. </span>
+                <span>{t('services.conservDesc1')}</span>
                 <br /><br />
-                <span>Dlatego kwestią olbrzymiej wagi są regularne kontrole stanu zębów (najlepiej co 6 miesięcy), które pozwolą na wczesną diagnozę i szybkie podjęcie leczenia.</span>
+                <span>{t('services.conservDesc2')}</span>
             </p>
           </div>
 
@@ -100,11 +102,11 @@ const Services: React.FC = () => {
             </div>
             
             <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900 mb-4 relative z-10">
-              Chirurgia
+              {t('services.surgTitle')}
             </h3>
             
             <p className="text-base md:text-lg text-slate-600 mb-6 font-light leading-relaxed relative z-10">
-              Chirurgia stomatologiczna to dział stomatologii zajmujący się leczeniem operacyjnym w obrębie jamy ustnej. Nowoczesne metody zapewniają precyzję, bezpieczeństwo i komfort pacjenta podczas każdego zabiegu.
+              {t('services.surgDesc')}
             </p>
 
           </div>
@@ -117,13 +119,13 @@ const Services: React.FC = () => {
             </div>
             
             <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900 mb-4 relative z-10">
-              Profilaktyka
+              {t('services.prevTitle')}
             </h3>
             
             <p className="text-base md:text-lg text-slate-600 font-light leading-relaxed relative z-10 space-y-4">
-              <span>Profilaktyka stomatologiczna to działania zapobiegające chorobom jamy ustnej – klucz do zdrowego uśmiechu. Obejmuje regularne wizyty kontrolne, profesjonalne czyszczenie zębów, usuwanie kamienia nazębnego oraz edukację w zakresie higieny jamy ustnej. </span>
+              <span>{t('services.prevDesc1')}</span>
               <br /><br />
-              <span>Dzięki niej można zapobiegać próchnicy i chorobom dziąseł, dbając o długotrwałe zdrowie zębów.</span>
+              <span>{t('services.prevDesc2')}</span>
             </p>
           </div>
 

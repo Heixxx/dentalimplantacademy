@@ -1,6 +1,8 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
   const handleScroll = (e: React.MouseEvent<HTMLElement, MouseEvent>, targetId: string) => {
     e.preventDefault();
     if (targetId === '#top') {
@@ -35,7 +37,7 @@ const Footer: React.FC = () => {
             </div>
 
             <p className="text-sm text-slate-500 leading-relaxed mb-6 max-w-[250px]">
-              Dedykowani perfekcji w dziedzinie implantologii i stomatologii rekonstrukcyjnej. Twój uśmiech to nasza wizytówka.
+            {t('footer.tagline')}
             </p>
 
             <div className="flex gap-4">
@@ -53,25 +55,25 @@ const Footer: React.FC = () => {
 
           <div>
             <h4 className="text-[#1A4E84] font-bold mb-6 uppercase text-xs tracking-widest border-b sm:border-b-0 sm:border-l-2 sm:border-[#1A4E84] sm:pl-3 pb-2 sm:pb-0">
-              Nawigacja
+              {t('footer.navTitle')}
             </h4>
             <ul className="space-y-3 text-sm inline-block sm:block text-left">
               <li>
                 <a onClick={(e) => handleScroll(e, '#about')} className="text-slate-600 hover:text-[#1A4E84] hover:font-medium transition-all flex items-center gap-2 cursor-pointer">
                   <span className="w-1.5 h-1.5 bg-blue-200 rounded-full hidden sm:block"></span>
-                  O naszej Klinice
+                  {t('footer.nav1')}
                 </a>
               </li>
               <li>
                 <a onClick={(e) => handleScroll(e, '#implanty')} className="text-slate-600 hover:text-[#1A4E84] hover:font-medium transition-all flex items-center gap-2 cursor-pointer">
                   <span className="w-1.5 h-1.5 bg-blue-200 rounded-full hidden sm:block"></span>
-                  Wszystko o implantach
+                  {t('footer.nav2')}
                 </a>
               </li>
               <li>
                 <a onClick={(e) => handleScroll(e, '#services')} className="text-slate-600 hover:text-[#1A4E84] hover:font-medium transition-all flex items-center gap-2 cursor-pointer">
                   <span className="w-1.5 h-1.5 bg-blue-200 rounded-full hidden sm:block"></span>
-                  Nasze Usługi
+                  {t('footer.nav3')}
                 </a>
               </li>
             </ul>
@@ -79,30 +81,30 @@ const Footer: React.FC = () => {
 
           <div>
             <h4 className="text-[#1A4E84] font-bold mb-6 uppercase text-xs tracking-widest border-b sm:border-b-0 sm:border-l-2 sm:border-[#1A4E84] sm:pl-3 pb-2 sm:pb-0">
-              Godziny otwarcia
+              {t('footer.hoursTitle')}
             </h4>
             <ul className="space-y-3 text-sm text-slate-500 inline-block sm:block text-left w-full max-w-[200px]">
               <li className="flex justify-between border-b border-slate-200 pb-2">
-                <span>Pon - Pt:</span>
+                <span>{t('footer.monFri')}</span>
                 <span className="font-medium text-slate-700">09:00 - 18:00</span>
               </li>
               <li className="flex justify-between border-b border-slate-200 pb-2">
-                <span>Sobota:</span>
-                <span className="font-medium text-slate-400">Zamknięte</span>
+                <span>{t('footer.sat')}</span>
+                <span className="font-medium text-slate-400">{t('footer.closed')}</span>
               </li>
               <li className="flex justify-between pb-2">
-                <span>Niedziela:</span>
-                <span className="font-medium text-slate-400">Zamknięte</span>
+                <span>{t('footer.sun')}</span>
+                <span className="font-medium text-slate-400">{t('footer.closed')}</span>
               </li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-[#1A4E84] font-bold mb-6 uppercase text-xs tracking-widest border-b sm:border-b-0 sm:border-l-2 sm:border-[#1A4E84] sm:pl-3 pb-2 sm:pb-0">
-              Szybki Kontakt
+              {t('footer.contactTitle')}
             </h4>
             <p className="text-sm text-slate-500 mb-2">
-              Umów się na wizytę lub zadaj pytanie.
+              {t('footer.contactSub')}
             </p>
 
             <a href="tel:+48178533385" className="inline-flex items-center gap-2 text-[#1A4E84] font-display font-bold hover:text-sky-600 transition-colors text-2xl mb-3 group">
@@ -122,7 +124,7 @@ const Footer: React.FC = () => {
 
             <div className="text-xs text-slate-400 border-t border-slate-200 pt-6">
               <p>&copy; {new Date().getFullYear()} Dental Implant Academy.</p>
-              <p>Wszelkie prawa zastrzeżone.</p>
+              <p>{t('footer.rights')}</p>
             </div>
           </div>
 

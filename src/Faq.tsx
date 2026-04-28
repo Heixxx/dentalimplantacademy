@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface FaqSubItem {
   subtitle: string;
@@ -6,63 +7,16 @@ interface FaqSubItem {
 }
 
 interface FaqCard {
-  id: number;
-  icon: string;
   title: string;
+  icon: string;
   items: FaqSubItem[];
 }
 
-const FAQ_DATA: FaqCard[] = [
-  {
-    id: 0,
-    icon: 'help_clinic',
-    title: 'Najczęściej zadawane pytania',
-    items: [
-      {
-        subtitle: 'Czy z implantów zębowych mogą skorzystać osoby w każdym wieku?',
-        text: 'Tak. Nie ma tutaj praktycznie żadnych ograniczeń. Jedynym przeciwwskazaniem do wykonania zabiegu implantacji jest wiek poniżej 17. roku życia ze względu na fakt, że w tym wieku trwa wciąż proces rozwoju kości. Innymi przeciwwskazaniami mogą być ogólne problemy zdrowotne.',
-      },
-      {
-        subtitle: 'Czy zabieg wszczepienia implantu boli?',
-        text: 'Zabieg przeprowadza się w znieczuleniu miejscowym, dlatego jest on bezbolesny. Pacjent może odczuwać lekki dyskomfort po ustąpieniu znieczulenia lub opuchliznę, ale jest to naturalny proces gojenia.',
-      },
-      {
-        subtitle: 'Jak długo trwa proces leczenia?',
-        text: 'Sam zabieg wszczepienia jednego implantu trwa zazwyczaj od 20 do 60 minut. Pełna integracja implantu z kością (zrośnięcie) trwa zazwyczaj od 3 do 6 miesięcy, po czym nakładana jest korona protetyczna.',
-      },
-      {
-        subtitle: 'Czy implanty zębowe trzeba wymieniać?',
-        text: 'Implanty są traktowane jako rozwiązanie długoterminowe, a nawet dożywotnie, jeśli są prawidłowo pielęgnowane. Wymagana jest jednak wzorowa higiena jamy ustnej i regularne wizyty kontrolne (co 6-12 miesięcy).',
-      },
-      {
-        subtitle: 'Czy organizm może odrzucić implant?',
-        text: 'Ryzyko odrzucenia (nieprzyjęcia się) implantu jest niewielkie i wynosi zazwyczaj poniżej 2-5%. Najczęstsze przyczyny to palenie tytoniu, zła higiena, infekcje lub zbyt mała ilość kości.',
-      },
-      {
-        subtitle: 'Jak dbać o implanty po zabiegu?',
-        text: 'Przez pierwsze dni należy unikać gorących potraw, intensywnego wysiłku oraz palenia tytoniu. Niezbędne jest stosowanie zaleconych leków przeciwbólowych i zimnych okładów.',
-      },
-    ],
-  },
-  {
-    id: 1,
-    icon: 'payments',
-    title: 'Bezpieczeństwo i koszty',
-    items: [
-      {
-        subtitle: 'Czy implanty są bezpieczne?',
-        text: 'Poprawnie wstawiony implant nie stanowi dla pacjenta zagrożenia. Implanty są wykonane z tytanu, który jest materiałem biokompatybilnym i dobrze tolerowanym przez organizm. Oczywiście, jak każda procedura medyczna, implantacja wiąże się z pewnym ryzykiem, takim jak infekcje czy problemy z gojeniem, jednak prawidłowo przeprowadzona procedura i staranna opieka pooperacyjna minimalizują zagrożenie, sprowadzając je niemal do zera.',
-      },
-      {
-        subtitle: 'Ile kosztują implanty zębowe?',
-        text: 'Koszt wszczepienia jednego implanta to 3.700 zł, a koszt pojedynczej korony na tym implancie to 3.300 zł.',
-      },
-    ],
-  },
-];
-
 const Faq = () => {
+  const { t } = useTranslation();
   const [openCardId, setOpenCardId] = useState<number | null>(null);
+
+  const cards = t('faq.cards', { returnObjects: true }) as FaqCard[];
 
   const toggle = (id: number) =>
     setOpenCardId((prev) => (prev === id ? null : id));
@@ -83,32 +37,31 @@ const Faq = () => {
         
         <div className="text-center mb-12 md:mb-16">
           <span className="text-teal font-bold tracking-widest uppercase text-xs md:text-sm block mb-2">
-            FAQ
+            {t('faq.tag')}
           </span>
           <h2
             id="faq-heading"
             className="font-display font-bold text-slate-900 mb-4"
             style={{ fontSize: 'clamp(1.875rem, 4vw, 3rem)' }}
           >
-            Najczęściej Zadawane&nbsp;<span className="text-primary">Pytania</span>
+            {t('faq.heading')}&nbsp;<span className="text-primary">{t('faq.headingHighlight')}</span>
           </h2>
           <p
             className="text-slate-600 font-light leading-relaxed max-w-xl mx-auto"
             style={{ fontSize: 'clamp(0.875rem, 1.5vw, 1.125rem)' }}
           >
-            Zebraliśmy odpowiedzi na pytania, które słyszymy najczęściej.
-            Kliknij wybrany temat, aby dowiedzieć się więcej.
+            {t('faq.sub')}
           </p>
         </div>
 
         
         <div className="flex flex-col gap-5">
-          {FAQ_DATA.map((card) => {
-            const isOpen = openCardId === card.id;
+          {cards.map((card, index) => {
+            const isOpen = openCardId === index;
 
             return (
               <div
-                key={card.id}
+                key={index}
                 className={`bg-white rounded-[1.75rem] border transition-all duration-500 overflow-hidden
                   ${isOpen
                     ? 'border-primary/20 shadow-xl shadow-primary/5'
@@ -116,10 +69,10 @@ const Faq = () => {
               >
                 
                 <button
-                  onClick={() => toggle(card.id)}
+                  onClick={() => toggle(index)}
                   aria-expanded={isOpen}
-                  aria-controls={`faq-panel-${card.id}`}
-                  id={`faq-btn-${card.id}`}
+                  aria-controls={`faq-panel-${index}`}
+                  id={`faq-btn-${index}`}
                   className="w-full flex items-center gap-4 p-6 md:p-8 text-left group
                     outline-none focus-visible:ring-0 rounded-[1.75rem]
                     transition-colors"
@@ -157,9 +110,9 @@ const Faq = () => {
 
                 
                 <div
-                  id={`faq-panel-${card.id}`}
+                  id={`faq-panel-${index}`}
                   role="region"
-                  aria-labelledby={`faq-btn-${card.id}`}
+                  aria-labelledby={`faq-btn-${index}`}
                   className="grid transition-[grid-template-rows] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]"
                   style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
                 >

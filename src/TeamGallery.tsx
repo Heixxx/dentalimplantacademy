@@ -1,48 +1,24 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface TeamMember {
     id: number;
-    name: string;
-    role: string;
     imageSrc: string;
 }
 
 const TEAM_DATA: TeamMember[] = [
-    {
-        id: 0,
-        name: 'Lek. stomatolog Dariusz Srokowski',
-        role: 'Lekarz stomatolog',
-        imageSrc: '/Doctor.png',
-    },
-    {
-        id: 1,
-        name: 'Ewelina Lantenszleger',
-        role: 'asystentka stomatologiczna',
-        imageSrc: '/Ewelina.jpeg',
-    },
-    {
-        id: 2,
-        name: 'Kinga Szczepanik-Popeka',
-        role: 'lekarz dentysta',
-        imageSrc: '/Kinga.jpeg',
-    },
-    {
-        id: 3,
-        name: 'Natalia Holouchanska',
-        role: 'asystentka stomatologiczna',
-        imageSrc: '/Natalia.jpeg',
-    },
-    {
-        id: 4,
-        name: 'Nasz Zespół',
-        role: 'Razem Tworzymy Uśmiechy',
-        imageSrc: '/All.jpeg',
-    },
+    { id: 0, imageSrc: '/Doctor.png' },
+    { id: 1, imageSrc: '/Ewelina.jpeg' },
+    { id: 2, imageSrc: '/Kinga.jpeg' },
+    { id: 3, imageSrc: '/Natalia.jpeg' },
+    { id: 4, imageSrc: '/All.jpeg' },
 ];
 
 const AUTO_PLAY_MS = 5000;
 
 const TeamGallery = () => {
+    const { t } = useTranslation();
+    const members = t('team.members', { returnObjects: true }) as { name: string; role: string }[];
     const [activeIndex, setActiveIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
     const [isPaused, setIsPaused] = useState(false);
@@ -145,21 +121,19 @@ const TeamGallery = () => {
                 <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="text-center mb-10 md:mb-14">
                         <span className="text-teal font-bold tracking-widest uppercase text-xs md:text-sm block mb-2">
-                            Nasz Zespół
+                            {t('team.tag')}
                         </span>
                         <h2
                             id="team-heading"
                             className="font-display font-bold text-slate-900 mb-4"
                             style={{ fontSize: 'clamp(1.875rem, 4vw, 3rem)' }}
                         >
-                            Ludzie, Którym&nbsp;<span className="text-primary">Zaufasz</span>
+                            {t('team.heading')}
                         </h2>
                         <p
                             className="text-slate-600 font-light leading-relaxed max-w-2xl mx-auto"
                             style={{ fontSize: 'clamp(0.875rem, 1.5vw, 1.125rem)' }}
                         >
-                            Nasz zespół to pasjonaci stomatologii, którzy łączą wiedzę,
-                            precyzję i&nbsp;empatię, aby zapewnić Ci najlepszą opiekę.
                         </p>
                     </div>
 
@@ -168,7 +142,7 @@ const TeamGallery = () => {
                         <button
                             onClick={handlePrev}
                             disabled={isAnimating}
-                            aria-label="Poprzedni członek zespołu"
+                            aria-label={t('team.prevLabel')}
                             className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-300
                 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2
                 ${isAnimating ? 'bg-slate-100 text-slate-300 cursor-not-allowed'
@@ -179,7 +153,7 @@ const TeamGallery = () => {
                         <button
                             onClick={handleNext}
                             disabled={isAnimating}
-                            aria-label="Następny członek zespołu"
+                            aria-label={t('team.nextLabel')}
                             className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-300
                 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2
                 ${isAnimating ? 'bg-slate-100 text-slate-300 cursor-not-allowed'
@@ -195,8 +169,8 @@ const TeamGallery = () => {
                     className="relative w-full flex items-center justify-center mt-4 md:mt-8"
                     style={{ height: 'clamp(580px, 73vw, 700px)' }}
                     role="region"
-                    aria-roledescription="karuzela"
-                    aria-label="Karuzela zespołu – użyj strzałek do nawigacji"
+                    aria-roledescription={t('team.carouselRole')}
+                    aria-label={t('team.carouselLabel')}
                     tabIndex={0}
                     onKeyDown={handleKeyDown}
                     onMouseEnter={pause}
@@ -221,7 +195,7 @@ const TeamGallery = () => {
 
                                     <img
                                         src={member.imageSrc}
-                                        alt={`${member.name} – ${member.role}`}
+                                    alt={`${members[index]?.name ?? ''} – ${members[index]?.role ?? ''}`}
                                         loading="lazy"
                                         className={`w-full h-full object-cover transition-transform ease-linear
                       ${isCurrent ? 'scale-[1.12] duration-[6000ms]' : 'scale-100 duration-700'}`}
@@ -237,13 +211,13 @@ const TeamGallery = () => {
                                             className="text-teal-100 font-bold uppercase tracking-wider mb-1"
                                             style={{ fontSize: 'clamp(0.6rem, 1vw, 0.75rem)' }}
                                         >
-                                            {member.role}
+                                            {members[index]?.role ?? ''}
                                         </span>
                                         <h3
                                             className="text-white font-display font-bold mb-1"
                                             style={{ fontSize: 'clamp(1rem, 2.2vw, 1.5rem)' }}
                                         >
-                                            {member.name}
+                                            {members[index]?.name ?? ''}
                                         </h3>
                                     </div>
                                 </div>
@@ -254,12 +228,12 @@ const TeamGallery = () => {
 
 
                 <div className="flex flex-col items-center gap-3 mt-6 md:mt-8 relative z-10">
-                    <nav className="flex justify-center gap-2" aria-label="Nawigacja zespołu">
+                    <nav className="flex justify-center gap-2" aria-label={t('team.tag')}>
                         {TEAM_DATA.map((member, index) => (
                             <button
                                 key={member.id}
                                 onClick={() => goTo(index)}
-                                aria-label={`Przejdź do: ${member.name}`}
+                                aria-label={`${members[index]?.name ?? ''}`}
                                 aria-current={activeIndex === index ? 'true' : undefined}
                                 className={`rounded-full transition-all duration-300
                   focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2

@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 
 const STORAGE_KEY = "dental_cookie_consent";
 
 const CookieBanner = () => {
+    const { t } = useTranslation();
     const [isVisible, setIsVisible] = useState(false);
     const [showAnimation, setShowAnimation] = useState(false);
 
@@ -32,7 +34,7 @@ const CookieBanner = () => {
             className="fixed bottom-0 left-0 w-full z-[9999] p-3 sm:p-4 lg:p-6 pointer-events-none flex justify-center overflow-hidden"
             role="dialog"
             aria-modal="false"
-            aria-label="Informacja o plikach cookies"
+            aria-label={t('cookie.ariaLabel')}
         >
             <div
                 className={`bg-white/95 backdrop-blur-md border border-teal/20 shadow-[0_-8px_40px_rgba(13,148,136,0.08)] rounded-2xl p-5 md:p-6 w-full max-w-5xl pointer-events-auto transform transition-all duration-500 ease-out ${
@@ -62,16 +64,10 @@ const CookieBanner = () => {
                         </div>
                         <div>
                             <h3 className="text-slate-900 font-bold font-display text-[1.5rem] min-[480px]:text-[1rem] md:text-[1.05rem] lg:text-[1.15rem] leading-tight mb-1">
-                                Ta strona korzysta z plików cookies
+                                {t('cookie.title')}
                             </h3>
                             <p className="text-slate-600 text-[0.8rem] min-[480px]:text-[0.84rem] md:text-[0.88rem] lg:text-[0.92rem] leading-relaxed max-w-3xl">
-                                Używamy niezbędnych plików cookies do prawidłowego działania
-                                serwisu. Opcjonalne cookies (analityczne) pomagają nam ulepszać
-                                stronę poprzez analizę ruchu. Klikając „Akceptuj wszystkie",
-                                wyrażasz zgodę na przetwarzanie opcjonalnych cookies. Wybierając
-                                „Tylko niezbędne", korzystamy wyłącznie z cookies technicznych.
-                                Zgodę możesz wycofać w dowolnym momencie, czyszcząc dane
-                                przeglądarki.
+                                {t('cookie.text')}
                             </p>
                         </div>
                     </div>
@@ -82,13 +78,13 @@ const CookieBanner = () => {
                             onClick={() => dismiss("necessary")}
                             className="w-full sm:w-auto px-6 py-2.5 rounded-xl border-2 border-teal bg-white text-slate-900 font-semibold text-[0.82rem] min-[480px]:text-[0.85rem] md:text-[0.88rem] hover:bg-slate-50 transition duration-300 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-teal/50 focus-visible:ring-offset-2"
                         >
-                            Tylko niezbędne
+                            {t('cookie.necessary')}
                         </button>
                         <button
                             onClick={() => dismiss("all")}
                             className="w-full sm:w-auto px-6 py-2.5 rounded-xl border-2 border-teal bg-teal hover:bg-teal/90 text-white font-semibold text-[0.82rem] min-[480px]:text-[0.85rem] md:text-[0.88rem] transition duration-300 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-teal/50 focus-visible:ring-offset-2"
                         >
-                            Akceptuj wszystkie
+                            {t('cookie.acceptAll')}
                         </button>
                     </div>
                 </div>

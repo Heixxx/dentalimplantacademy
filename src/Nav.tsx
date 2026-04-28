@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import i18n from './i18n/i18n';
 
 interface LangOption {
   code: string;
@@ -6,51 +8,42 @@ interface LangOption {
   flag: string;
 }
 
-interface NavItem {
-  label: string;
-  target: string;
-}
-
-interface NavGroup {
-  id: string;
-  label: string;
-  items: NavItem[];
-}
-
 const LANGUAGES: LangOption[] = [
   { code: 'pl', label: 'Polski', flag: 'PL' },
   { code: 'en', label: 'English', flag: 'EN' },
 ];
 
-const NAV_GROUPS: NavGroup[] = [
-  {
-    id: 'informacje',
-    label: 'Informacje',
-    items: [
-      { label: 'O nas', target: '#about' },
-      { label: 'Implanty', target: '#implanty' },
-      { label: 'Usługi', target: '#services' },
-      { label: 'FAQ', target: '#faq' },
-    ],
-  },
-  {
-    id: 'galerie',
-    label: 'Galerie',
-    items: [
-      { label: 'Zespół', target: '#team' },
-      { label: 'Klinika', target: '#showcase' },
-    ],
-  },
-];
-
 const Nav = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
-  const [mobileOpenGroup, setMobileOpenGroup] = useState<string | null>(NAV_GROUPS[0].id);
+  const [mobileOpenGroup, setMobileOpenGroup] = useState<string | null>('informacje');
   const [langOpen, setLangOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState<LangOption>(LANGUAGES[0]);
   const langRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const currentLang = LANGUAGES.find((l) => l.code === i18n.language) ?? LANGUAGES[0];
+
+  const NAV_GROUPS = [
+    {
+      id: 'informacje',
+      label: t('nav.informacje'),
+      items: [
+        { label: t('nav.items.about'), target: '#about' },
+        { label: t('nav.items.implanty'), target: '#implanty' },
+        { label: t('nav.items.services'), target: '#services' },
+        { label: t('nav.items.faq'), target: '#faq' },
+      ],
+    },
+    {
+      id: 'galerie',
+      label: t('nav.galerie'),
+      items: [
+        { label: t('nav.items.team'), target: '#team' },
+        { label: t('nav.items.showcase'), target: '#showcase' },
+      ],
+    },
+  ];
 
   const closeMenu = () => {
     setIsOpen(false);
@@ -82,7 +75,7 @@ const Nav = () => {
   }, []);
 
   const selectLang = (lang: LangOption) => {
-    setCurrentLang(lang);
+    i18n.changeLanguage(lang.code);
     setLangOpen(false);
   };
 
@@ -155,11 +148,11 @@ const Nav = () => {
                       <div
                         id={`desktop-nav-panel-${group.id}`}
                         role="dialog"
-                        aria-label={`${group.label} – sekcje na stronie`}
+                      aria-label={`${group.label} – ${t('nav.ariaNavPanel')}`}
                         className="absolute left-0 top-full pt-2"
                       >
                         <div className="w-[18rem] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md">
-                            <ul className="flex flex-col p-2" aria-label={`${group.label} – lista sekcji`}>
+                            <ul className="flex flex-col p-2" aria-label={`${group.label} – ${t('nav.ariaNavPanel')}`}>
                               {group.items.map((item) => (
                                 <li key={item.target}>
                                   <a
@@ -184,7 +177,7 @@ const Nav = () => {
               onClick={(e) => handleScroll(e, '#contact')}
               className="relative group text-sm xl:text-[15px] text-slate-600 hover:text-[#1A4E84] font-medium transition-colors duration-300 cursor-pointer whitespace-nowrap rounded-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A4E84] focus-visible:ring-offset-2"
             >
-              Kontakt
+              {t('nav.contact')}
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#1A4E84] transition-all duration-300 group-hover:w-full"></span>
             </a>
 
@@ -199,7 +192,7 @@ const Nav = () => {
                 onClick={() => setLangOpen((p) => !p)}
                 aria-haspopup="listbox"
                 aria-expanded={langOpen}
-                aria-label={`Zmień język – aktualny: ${currentLang.label}`}
+                aria-label={`${t('nav.ariaLangLabel')} ${currentLang.label}`}
                 className="flex cursor-pointer items-center gap-1 px-3 py-2 rounded-full border border-slate-200 hover:border-[#1A4E84]/30 bg-white text-slate-700 text-sm font-medium transition-all duration-200 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A4E84] focus-visible:ring-offset-2 focus-visible:border-[#1A4E84]"
               >
                 <span className="text-base leading-none" aria-hidden="true">{currentLang.flag}</span>
@@ -210,7 +203,7 @@ const Nav = () => {
               {langOpen && (
                 <ul
                   role="listbox"
-                  aria-label="Wybierz język"
+                  aria-label={t('nav.ariaSelectLang')}
                   className="absolute right-0 mt-2 w-44 bg-white border border-slate-100 rounded-2xl shadow-xl py-2 z-50 animate-[fadeIn_150ms_ease-out]"
                 >
                   {LANGUAGES.map((lang) => (
@@ -235,7 +228,7 @@ const Nav = () => {
             </div>
 
             <a onClick={(e) => handleScroll(e, '#contact')} className="bg-[#1A4E84] hover:bg-[#123860] text-white px-4 xl:px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 shadow-lg shadow-[#1A4E84]/20 cursor-pointer hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#1A4E84]/30 hover:text-white whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A4E84] focus-visible:ring-offset-2">
-              Umów wizytę
+              {t('nav.bookAppointment')}
             </a>
           </div>
 
@@ -245,7 +238,7 @@ const Nav = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="bg-transparent text-[#1A4E84] border border-slate-200 shadow-sm p-2.5 rounded-xl hover:bg-slate-100/50 transition-colors flex items-center justify-center cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A4E84] focus-visible:ring-offset-2"
-              aria-label="Toggle menu"
+              aria-label={t('nav.ariaToggleMenu')}
             >
               <span className={`material-symbols-outlined text-2xl transition-transform duration-300 ${isOpen ? 'rotate-90 scale-110' : 'rotate-0'}`}>
                 {isOpen ? 'close' : 'menu'}
@@ -287,7 +280,7 @@ const Nav = () => {
                     style={{ gridTemplateRows: isActive ? '1fr' : '0fr' }}
                   >
                     <div className="overflow-hidden">
-                      <ul className="px-4 pb-4 space-y-2" aria-label={`${group.label} – lista sekcji`}>
+                      <ul className="px-4 pb-4 space-y-2" aria-label={`${group.label} – ${t('nav.ariaNavPanel')}`}>
                         {group.items.map((item) => (
                           <li key={item.target}>
                             <a
@@ -310,7 +303,7 @@ const Nav = () => {
               onClick={(e) => handleScroll(e, '#contact')}
               className="flex items-center justify-between gap-3 rounded-[1.5rem] border border-slate-200 bg-white px-4 py-4 text-slate-800 hover:text-[#1A4E84] hover:border-[#1A4E84]/20 font-semibold text-base cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A4E84] focus-visible:ring-offset-2 focus-visible:border-[#1A4E84]"
             >
-              <span>Kontakt</span>
+              <span>{t('nav.contact')}</span>
               <span className="material-symbols-outlined text-base text-slate-400">arrow_forward</span>
             </a>
           </div>
@@ -323,7 +316,7 @@ const Nav = () => {
               <button
                 key={lang.code}
                 onClick={() => selectLang(lang)}
-                aria-label={`Zmień język na ${lang.label}`}
+                aria-label={`${t('nav.ariaChangeLangTo')} ${lang.label}`}
                 className={`flex items-center gap-1 px-3 py-2 rounded-full border text-sm font-medium transition-all duration-200
                   ${currentLang.code === lang.code
                     ? 'border-[#1A4E84] bg-[#1A4E84]/5 text-[#1A4E84]'
@@ -345,7 +338,7 @@ const Nav = () => {
             </a>
 
             <a onClick={(e) => handleScroll(e, '#contact')} className="bg-[#1A4E84] hover:bg-[#123860] text-white px-6 py-2.5 rounded-full font-bold shadow-lg shadow-[#1A4E84]/20 cursor-pointer transition-transform hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A4E84] focus-visible:ring-offset-2">
-              Umów wizytę
+              {t('nav.bookAppointment')}
             </a>
           </div>
         </div>
