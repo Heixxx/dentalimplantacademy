@@ -49,7 +49,6 @@ const TeamGallery = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
     const [isPaused, setIsPaused] = useState(false);
-    const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
     const total = TEAM_DATA.length;
 
@@ -65,26 +64,20 @@ const TeamGallery = () => {
     const handleNext = useCallback(() => goTo(activeIndex + 1), [goTo, activeIndex]);
     const handlePrev = useCallback(() => goTo(activeIndex - 1), [goTo, activeIndex]);
 
-
+    // Clear animating flag after transition
     useEffect(() => {
         const timer = setTimeout(() => setIsAnimating(false), 700);
         return () => clearTimeout(timer);
     }, [activeIndex]);
 
-
+    // Auto-play: resets every time activeIndex changes, so manual clicks push the timer back
     useEffect(() => {
-        if (isPaused) {
-            if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-            return;
-        }
-        autoPlayRef.current = setInterval(() => {
+        if (isPaused) return;
+        const timer = setTimeout(() => {
             setActiveIndex((prev) => (prev + 1) % total);
         }, AUTO_PLAY_MS);
-        return () => {
-            if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-        };
-    }, [isPaused, total]);
-
+        return () => clearTimeout(timer);
+    }, [activeIndex, isPaused, total]);
 
     const pause = () => setIsPaused(true);
     const resume = () => setIsPaused(false);
