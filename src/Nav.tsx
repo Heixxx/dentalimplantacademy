@@ -109,10 +109,10 @@ const Nav = () => {
             <img src="/logo.png" alt="Dental Implant Academy Logo" className="w-12 h-12 sm:w-14 sm:h-14 xl:w-16 xl:h-16 object-contain" />
             <div>
               <h1 className="font-display font-bold text-sm sm:text-base xl:text-lg text-[#1A4E84] uppercase tracking-[0.18em] sm:tracking-[0.22em] leading-none whitespace-nowrap">
-                Dental Implant
+                Dental Implant Academy
               </h1>
               <span className="text-[9px] sm:text-[10px] xl:text-xs text-slate-500 font-medium tracking-[0.28em] uppercase">
-                 Academy Rzeszów
+                 Rzeszów
               </span>
             </div>
           </div>
