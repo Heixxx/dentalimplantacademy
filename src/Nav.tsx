@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import i18n from './i18n/i18n';
 
 interface LangOption {
   code: string;
@@ -14,7 +13,7 @@ const LANGUAGES: LangOption[] = [
 ];
 
 const Nav = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
   const [mobileOpenGroup, setMobileOpenGroup] = useState<string | null>('informacje');
