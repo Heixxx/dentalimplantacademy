@@ -7,7 +7,6 @@ interface TeamMember {
 }
 
 const TEAM_DATA: TeamMember[] = [
-<<<<<<< HEAD
     {
         id: 0,
         name: 'Lek. stomatolog Dariusz Srokowski',
@@ -38,13 +37,6 @@ const TEAM_DATA: TeamMember[] = [
         role: 'Razem Tworzymy Uśmiechy',
         imageSrc: '/All.jpeg',
     },
-=======
-    { id: 0, imageSrc: '/Doctor.png' },
-    { id: 1, imageSrc: '/Ewelina.jpeg' },
-    { id: 2, imageSrc: '/Kinga.jpeg' },
-    { id: 3, imageSrc: '/Natalia.jpeg' },
-    { id: 4, imageSrc: '/All.jpeg' },
->>>>>>> e56bdbde1f89fb06dc00a50d8d4e47a9a1e8c5ba
 ];
 
 const AUTO_PLAY_MS = 5000;
@@ -161,12 +153,13 @@ const TeamGallery = () => {
                             className="font-display font-bold text-slate-900 mb-4"
                             style={{ fontSize: 'clamp(1.875rem, 4vw, 3rem)' }}
                         >
-                            {t('team.heading')}
+                            {t('team.heading')}&nbsp;<span className="text-primary">{t('team.headingHighlight')}</span>
                         </h2>
                         <p
                             className="text-slate-600 font-light leading-relaxed max-w-2xl mx-auto"
                             style={{ fontSize: 'clamp(0.875rem, 1.5vw, 1.125rem)' }}
                         >
+                            {t('team.sub')}
                         </p>
                     </div>
 

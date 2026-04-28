@@ -76,7 +76,7 @@ const ImplantEducation: React.FC = () => {
                             <h3 className="font-display text-3xl lg:text-4xl font-bold text-slate-800">{t('implant.whatTitle')}</h3>
                             <div className="text-slate-600 font-light leading-relaxed text-base md:text-lg lg:text-xl space-y-4">
                                 <p>
-                                    Implant zębowy to sztuczny korzeń, wykonany najczęściej z tytanu, który jest wprowadzany do kości szczęki lub żuchwy. Stanowi stabilną bazę dla odbudowy protetycznej, takiej jak korona, most lub proteza. Implanty są trwałe i umożliwiają odzyskanie pełnej funkcji zęba, zarówno pod względem estetycznym, jak i funkcjonalnym.
+                                    {t('implant.whatP1')}
                                 </p>
                                 <p>
                                     {t('implant.whatP2')}
@@ -104,17 +104,7 @@ const ImplantEducation: React.FC = () => {
                                 <li className="flex gap-4 items-start group">
                                     <div className="flex-shrink-0 mt-1.5 w-2 h-2 rounded-full bg-[#1A4E84] group-hover:scale-150 transition-transform duration-300 ring-4 ring-sky-50"></div>
                                     <p className="text-slate-600 font-light leading-relaxed text-base md:text-lg">
-                                        <strong className="font-semibold text-slate-800">Zaplanowanie leczenia</strong> – Na podstawie przeprowadzonego badania lekarz stomatolog przedstawi pacjentowi plan
-                                        przeprowadzenia zabiegu implantologicznego, który będzie się składał z kilku etapów. Zabieg
-                                        wszczepienia implantu wykonywany jest z miejscowym znieczuleniem, aby pacjent nie odczuwał
-                                        bólu czy dyskomfortu. Po wprowadzeniu implantu rozpoczyna się proces gojenia tkanki kostnej,
-                                        co może potrwać około 3-4 miesięcy. Na ten okres lekarz nakłada na implant (element
-                                        wszczepiony w kość) mikroprotezę lub ząb tymczasowy w zależności ile implantów zostanie
-                                        wszczepionych podczas zabiegu. <br></br><br></br>
-                                        W trakcie gojenia pacjent przychodzi na kontrolę, aby na podstawie prześwietlenia RTG lekarz
-                                        ocenił, czy implant goi się poprawnie.<br></br><br></br>
-                                        Ostatnim etapem jest nasadzenie korony protetycznej imitującej naturalny ząb, która będzie
-                                        dobrana kolorystycznie do reszty uzębienia.
+                                        <strong className="font-semibold text-slate-800">{t('implant.step2Title')}</strong> – {t('implant.step2Text')}
                                     </p>
                                 </li>
                                 <li className="flex gap-4 items-start group">
@@ -133,8 +123,8 @@ const ImplantEducation: React.FC = () => {
                                 <div className="flex gap-4 group cursor-default">
                                     <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-sky-50 text-[#1A4E84] flex items-center justify-center font-bold text-lg border border-sky-100 group-hover:bg-[#1A4E84] group-hover:text-white transition-all duration-300 shadow-sm">1</div>
                                     <div className="pt-1">
-                                        <h5 className="text-lg md:text-xl font-bold mb-1 text-slate-800 group-hover:text-[#1A4E84] transition-colors duration-300">Implant</h5>
-                                        <p className="text-slate-600 font-light leading-relaxed text-base md:text-lg">Niewielki element wszczepiany w kość, najczęściej wykonany z tytanu.</p>
+                                        <h5 className="text-lg md:text-xl font-bold mb-1 text-slate-800 group-hover:text-[#1A4E84] transition-colors duration-300">{t('implant.part1Title')}</h5>
+                                        <p className="text-slate-600 font-light leading-relaxed text-base md:text-lg">{t('implant.part1Text')}</p>
                                     </div>
                                 </div>
                                 <div className="flex gap-4 group cursor-default">

@@ -59,7 +59,12 @@ const Showcase = () => {
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 md:mb-12 flex flex-col md:flex-col justify-center items-center md:items-end gap-6 text-center">
         <div className='text-center w-full'>
           <span className="text-teal font-bold tracking-widest uppercase text-xs md:text-sm block mb-1">{t('showcase.tag')}</span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mt-1 md:mt-2">{t('showcase.heading')}</h2>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mt-1 md:mt-2">
+            {t('showcase.heading')}&nbsp;<span className="text-primary">{t('showcase.headingHighlight')}</span>
+          </h2>
+          <p className="text-slate-600 font-light leading-relaxed max-w-xl mx-auto mt-3" style={{ fontSize: 'clamp(0.875rem, 1.5vw, 1.125rem)' }}>
+            {t('showcase.sub')}
+          </p>
         </div>
         
         <div className="flex flex-col md:items-end gap-4 md:gap-5 w-full justify-center text-center">

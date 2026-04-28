@@ -36,7 +36,7 @@ const Services: React.FC = () => {
             </div>
             
             <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900 mb-4 relative z-10">
-              Endodoncja
+              {t('services.endoTitle')}
             </h3>
             
             <p className="text-base md:text-lg text-slate-600 mb-6 font-light leading-relaxed relative z-10">

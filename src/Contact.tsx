@@ -49,7 +49,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest font-bold mb-1">{t('contact.hoursLabel')}</p>
-                    <p className="text-sm md:text-lg font-medium text-slate-800 leading-snug">{t('contact.hours')}<br />09:00 - 18:00</p>
+                    <p className="text-sm md:text-lg font-medium text-slate-800 leading-snug">{t('contact.hours')}<br />{t('footer.monFriHours')}</p>
                   </div>
                 </div>
               </div>

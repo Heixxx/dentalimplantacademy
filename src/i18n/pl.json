@@ -100,7 +100,9 @@
   },
   "team": {
     "tag": "Nasz Zespół",
-    "heading": "Poznaj naszych specjalistów",
+    "heading": "Poznaj naszych",
+    "headingHighlight": "specjalistów",
+    "sub": "Nasz zespół tworzą pasjonaci stomatologii, którzy łączą wiedzę, precyzję i empatię, aby zapewnić Ci najlepszą możliwą opiekę.",
     "prevLabel": "Poprzedni",
     "nextLabel": "Następny",
     "carouselRole": "karuzela",
@@ -115,7 +117,9 @@
   },
   "showcase": {
     "tag": "Infrastruktura",
-    "heading": "Nasza Klinika",
+    "heading": "Nasza",
+    "headingHighlight": "Klinika",
+    "sub": "Stworzyliśmy nowoczesne, komfortowe i w pełni wyposażone miejsce, aby każda wizyta była przyjemna i wolna od stresu.",
     "prevLabel": "Poprzednia galeria",
     "nextLabel": "Następna galeria",
     "rooms": [
@@ -175,6 +179,7 @@
     "nav3": "Nasze Usługi",
     "hoursTitle": "Godziny otwarcia",
     "monFri": "Pon - Pt:",
+    "monFriHours": "09:00 – 18:00",
     "sat": "Sobota:",
     "sun": "Niedziela:",
     "closed": "Zamknięte",

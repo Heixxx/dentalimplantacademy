@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm text-slate-500 inline-block sm:block text-left w-full max-w-[200px]">
               <li className="flex justify-between border-b border-slate-200 pb-2">
                 <span>{t('footer.monFri')}</span>
-                <span className="font-medium text-slate-700">09:00 - 18:00</span>
+                <span className="font-medium text-slate-700">{t('footer.monFriHours')}</span>
               </li>
               <li className="flex justify-between border-b border-slate-200 pb-2">
                 <span>{t('footer.sat')}</span>
