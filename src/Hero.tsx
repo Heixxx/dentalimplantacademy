@@ -1,17 +1,14 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 
 import IMG_THINKING from "/tommy.png";
 import IMG_SMILING from "/tommy-van.png";
 
-const adjectives = ["Precyzyjne"];
-
 const Hero = () => {
+    const { t } = useTranslation();
     const [isFlipped, setIsFlipped] = useState(false);
     const [showFirstBubble, setShowFirstBubble] = useState(false);
     const [showSecondBubble, setShowSecondBubble] = useState(false);
-
-
-    const [currentAdj] = useState(() => adjectives);
 
     useEffect(() => {
         const t1 = setTimeout(() => {
@@ -84,22 +81,19 @@ const Hero = () => {
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 mb-6">
                         <span className="led-green"></span>
                         <span className="text-slate-600 text-[10px] md:text-xs font-bold uppercase tracking-widest">
-                            Nowi pacjenci mile widziani
+                            {t('hero.badge')}
                         </span>
                     </div>
 
                     <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-7xl text-slate-900 leading-[1.2] mb-6">
-                        Tworzymy <br className="hidden sm:block" />
-                        <span className="text-primary">{currentAdj}</span>{" "}
+                        {t('hero.headline1')} <br className="hidden sm:block" />
+                        <span className="text-primary">{t('hero.adjective')}</span>{" "}
                         <br className="hidden sm:block" />
-                        Uśmiechy
+                        {t('hero.headline2')}
                     </h1>
 
                     <p className="text-base md:text-lg text-slate-600 mb-8 leading-relaxed max-w-lg font-light">
-                        Doświadcz przyszłości stomatologii rekonstrukcyjnej.
-                        Łączymy elitarną wiedzę chirurgiczną, nowoczesną
-                        technologię i empatię, aby przywrócić Twoją pewność
-                        siebie.
+                        {t('hero.description')}
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -107,7 +101,7 @@ const Hero = () => {
                             className="bg-primary text-white px-8 py-4 rounded-xl text-center font-medium hover:bg-green-300 transition duration-300 shadow-xl shadow-primary/20 flex items-center justify-center gap-2 group"
                             href="#contact"
                         >
-                            Umów Konsultację
+                            {t('hero.cta')}
                             <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
                                 arrow_forward
                             </span>
@@ -148,7 +142,7 @@ const Hero = () => {
                             <div className="bg-white px-5 py-3 md:px-6 md:py-4 rounded-3xl relative">
                                 <div className="absolute -bottom-2 right-6 w-5 h-5 bg-white transform rotate-45 rounded-sm"></div>
                                 <p className="text-slate-700 font-medium text-sm md:text-base leading-snug relative z-10">
-                                    Komfort i uśmiech?
+                                    {t('hero.bubble1')}
                                     {/* <br />{" "}
                                     <span className="text-primary font-bold text-base md:text-lg">
                                         {currentService}...
@@ -167,7 +161,7 @@ const Hero = () => {
                             <div className="bg-primary px-5 py-3 md:px-6 md:py-4 rounded-3xl relative">
                                 <div className="absolute -top-2 left-6 w-5 h-5 bg-primary transform rotate-45 rounded-sm"></div>
                                 <p className="text-white font-medium text-sm md:text-base leading-snug relative z-10">
-                                    Lekarz stomatolog z ponad 25-letnim doświadczeniem w implantologii, w Kanadzie i Polsce. <br />
+                                    {t('hero.bubble2')} <br />
                                     {/* <span className="font-bold text-accent">
                                         Dental Implant Academy!
                                     </span> */}
@@ -193,7 +187,7 @@ const Hero = () => {
                                     style={{ backfaceVisibility: "hidden" }}
                                 >
                                     <img
-                                        alt="Pacjentka zastanawiająca się"
+                                        alt={t('hero.imgThinkingAlt')}
                                         className="w-full h-full object-cover object-center"
                                         src={IMG_THINKING}
                                     />
@@ -207,7 +201,7 @@ const Hero = () => {
                                     }}
                                 >
                                     <img
-                                        alt="Pacjentka uśmiechnięta"
+                                        alt={t('hero.imgSmilingAlt')}
                                         className="w-full h-full object-cover object-center"
                                         src={IMG_SMILING}
                                     />

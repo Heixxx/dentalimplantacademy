@@ -1,0 +1,192 @@
+{
+  "nav": {
+    "informacje": "Information",
+    "galerie": "Galleries",
+    "items": {
+      "about": "About us",
+      "implanty": "Implants",
+      "services": "Services",
+      "faq": "FAQ",
+      "team": "Team",
+      "showcase": "Clinic"
+    },
+    "contact": "Contact",
+    "bookAppointment": "Book appointment",
+    "ariaNavPanel": "page sections",
+    "ariaLangLabel": "Change language – current:",
+    "ariaSelectLang": "Select language",
+    "ariaChangeLangTo": "Switch language to",
+    "ariaToggleMenu": "Toggle menu"
+  },
+  "hero": {
+    "badge": "New patients welcome",
+    "adjective": "Precise",
+    "headline1": "We Create",
+    "headline2": "Smiles",
+    "description": "Experience the future of reconstructive dentistry. We combine elite surgical expertise, modern technology and empathy to restore your confidence.",
+    "cta": "Book a Consultation",
+    "bubble1": "Comfort and a smile?",
+    "bubble2": "Dental surgeon with over 25 years of experience in implantology, in Canada and Poland.",
+    "imgThinkingAlt": "Patient thinking",
+    "imgSmilingAlt": "Patient smiling"
+  },
+  "about": {
+    "tag": "Who we are",
+    "heading": "Meet dental surgeon",
+    "headingName": "Dariusz Srokowski",
+    "bio": "Dr. Dariusz Srokowski is a graduate of the Faculty of Dentistry at the University of Western Ontario in Canada, which he completed in 1987. From 1993 to 1996 he worked as a professor's assistant in the prosthetics department at Western Ontario, while simultaneously founding his first practice specialising in implantology and advanced jaw reconstruction. For over 25 years he has been seeing patients at the Dental Implant Academy in Rzeszów, working in both Canada and Poland.",
+    "check1": "Free consultation",
+    "check2": "On-site diagnostics",
+    "check3": "Treatment & financing plan",
+    "link": "See our services",
+    "clinics": "Clinics",
+    "clinicsVal": "Canada & Rzeszów",
+    "cert": "Certificates",
+    "certVal": "RCDSO Member",
+    "imgAlt": "Dental surgeon Dariusz Srokowski"
+  },
+  "implant": {
+    "badge": "Comprehensive Care",
+    "heading": "Discover the possibilities of",
+    "headingHighlight": "modern dentistry.",
+    "p1": "Tooth loss, regardless of the cause, significantly affects quality of life, self-confidence, and oral health at any age. Implantology, one of the most advanced fields in dentistry, offers durable and aesthetic solutions for those who want to regain their smile and eating comfort.",
+    "p2": "Thanks to the dynamic development of implant technologies and the expertise of Dr. Srokowski, who has been running a private practice in Canada and Poland for over twenty-five years, Dental Implant Academy patients have access to innovative tooth restoration methods that are functional and look natural.",
+    "whatTitle": "What are dental implants?",
+    "whatP1": "A dental implant is an artificial root, most commonly made of titanium or zirconia, that is placed into the jawbone. It provides a stable base for prosthetic restoration such as a crown, bridge, or denture. Implants are durable and enable full recovery of tooth function, both aesthetically and functionally.",
+    "whatP2": "They serve as an artificial root that, after being placed in the jaw, fuses with the bone. For many patients this is a chance to regain confidence, a beautiful smile, and full oral functionality.",
+    "stepsTitle": "Implant placement stages",
+    "step1Title": "Consultation",
+    "step1Text": "The first consultation can take place based on a panoramic X-ray sent by the patient, but decisions and treatment planning occur during the office visit, where the doctor performs a detailed assessment of the oral cavity and bone volume — especially important for patients who lost teeth long ago. In such cases, bone regeneration or a sinus lift procedure may be required.",
+    "step2Title": "Treatment planning",
+    "step2Text": "Based on the examination, the dentist will present the patient with an implant treatment plan consisting of several stages. The implant placement procedure is performed under local anaesthesia so the patient feels no pain or discomfort. After the implant is placed, bone healing begins and typically takes about 3–4 months. During this period the doctor places a temporary micro-prosthesis or temporary tooth on the implant depending on how many implants are placed.\n\nDuring healing the patient comes in for check-ups so the doctor can assess via X-ray whether the implant is healing correctly.\n\nThe final stage is fitting the prosthetic crown that mimics a natural tooth, colour-matched to the rest of the dentition.",
+    "step3Title": "Post-implant care",
+    "step3Text": "It is recommended that the patient attends an annual hygiene appointment after implant placement as a preventive measure.",
+    "partsTitle": "Implant components",
+    "part1Title": "Implant",
+    "part1Text": "A small element inserted into the bone, most commonly made of titanium or zirconia.",
+    "part2Title": "Abutment",
+    "part2Text": "The connector linking the implant to the visible part of the tooth.",
+    "part3Title": "Prosthetic crown",
+    "part3Text": "The visible part mimicking a natural tooth, colour-matched to the rest of the dentition.",
+    "advantagesTitle": "Key advantages",
+    "adv1Title": "Durability",
+    "adv1Text": "with proper oral hygiene, implants can last a lifetime.",
+    "adv2Title": "Comfort",
+    "adv2Text": "they behave like natural teeth, eliminating the discomfort of removable dentures.",
+    "adv3Title": "Healthy bone",
+    "adv3Text": "they prevent bone loss at the site of the missing tooth, which is crucial for preserving facial contours.",
+    "imgAlt": "Diagram of a dental implant structure"
+  },
+  "services": {
+    "tag": "Full Range of Services",
+    "heading": "We care for your health from the ground up",
+    "sub": "Whatever problem you come to us with, we have the knowledge and equipment to guide you through every stage of treatment.",
+    "endoTitle": "Endodontics",
+    "endoDesc": "Endodontics, i.e. root canal treatment. The main goal of this procedure is to save the tooth from extraction.",
+    "endoWhen": "When is it needed?",
+    "endo1": "Deep decay reaching the pulp.",
+    "endo2": "Severe toothache (spontaneous or when biting).",
+    "endo3": "Dead pulp ('dead' teeth).",
+    "endo4": "Mechanical injuries (e.g. a fracture exposing the nerve).",
+    "endo5": "Retreatment when a previous root filling was inadequate.",
+    "conservTitle": "Conservative dentistry",
+    "conservDesc1": "Conservative dentistry deals with the diagnosis and treatment of cavities and the restoration of teeth damaged by decay. It is extremely important to remove carious lesions at the earliest possible stage, making treatment simple, minimally invasive and more affordable.",
+    "conservDesc2": "That is why regular dental check-ups (ideally every 6 months) are of great importance, allowing early diagnosis and prompt treatment.",
+    "surgTitle": "Surgery",
+    "surgDesc": "Dental surgery is the branch of dentistry dealing with surgical treatment within the oral cavity. Modern techniques ensure precision, safety and patient comfort during every procedure.",
+    "prevTitle": "Prevention",
+    "prevDesc1": "Dental prevention encompasses actions to prevent oral diseases — the key to a healthy smile. It includes regular check-ups, professional tooth cleaning, tartar removal, and oral hygiene education.",
+    "prevDesc2": "It helps prevent tooth decay and gum disease, ensuring long-term dental health."
+  },
+  "team": {
+    "tag": "Our Team",
+    "heading": "Meet our specialists",
+    "prevLabel": "Previous",
+    "nextLabel": "Next",
+    "carouselRole": "carousel",
+    "carouselLabel": "Team carousel – use arrow keys to navigate",
+    "members": [
+      { "name": "Dr. Dariusz Srokowski", "role": "Dental surgeon" },
+      { "name": "Ewelina Lantenszleger", "role": "Dental assistant" },
+      { "name": "Kinga Szczepanik-Popek", "role": "Dentist" },
+      { "name": "Natalia Holouchanska", "role": "Dental assistant" },
+      { "name": "Our Team", "role": "Together We Create Smiles" }
+    ]
+  },
+  "showcase": {
+    "tag": "Infrastructure",
+    "heading": "Our Clinic",
+    "prevLabel": "Previous",
+    "nextLabel": "Next",
+    "rooms": [
+      { "title": "Treatment Room", "subtitle": "Comfortable chair and vast experience" },
+      { "title": "Surgical Suite", "subtitle": "Precision instruments" },
+      { "title": "Waiting Room", "subtitle": "Patient comfort zone" },
+      { "title": "Wonderful people", "subtitle": "Always there for you" },
+      { "title": "Building", "subtitle": "Where we work" }
+    ]
+  },
+  "faq": {
+    "tag": "FAQ",
+    "heading": "Frequently Asked",
+    "headingHighlight": "Questions",
+    "sub": "We have gathered answers to the questions we hear most often. Click a topic to learn more.",
+    "cards": [
+      {
+        "title": "Frequently asked questions",
+        "icon": "help_clinic",
+        "items": [
+          { "subtitle": "Can dental implants be used by people of any age?", "text": "Yes. There are virtually no restrictions. The only contraindication is being under 17, since bone development is still ongoing at that age. Other contraindications may include general health issues." },
+          { "subtitle": "Does the implant placement procedure hurt?", "text": "The procedure is performed under local anaesthesia and is therefore painless. The patient may experience mild discomfort after the anaesthesia wears off or some swelling, but this is a natural part of the healing process." },
+          { "subtitle": "How long does the treatment process take?", "text": "The implant placement itself usually takes 20 to 60 minutes. Full osseointegration (fusion with the bone) typically takes 3 to 6 months, after which the prosthetic crown is fitted." },
+          { "subtitle": "Do dental implants need to be replaced?", "text": "Implants are considered a long-term, even lifelong solution when properly maintained. Excellent oral hygiene and regular check-ups (every 6–12 months) are required." },
+          { "subtitle": "Can the body reject an implant?", "text": "The risk of implant failure is small, usually below 2–5%. The most common causes are smoking, poor hygiene, infections, or insufficient bone volume." },
+          { "subtitle": "How to care for implants after the procedure?", "text": "For the first few days avoid hot food, intense physical activity, and smoking. Take the prescribed pain relief medication and use cold compresses." }
+        ]
+      },
+      {
+        "title": "Safety & costs",
+        "icon": "payments",
+        "items": [
+          { "subtitle": "Are implants safe?", "text": "A correctly placed implant poses no risk to the patient. Implants are made of titanium, a biocompatible material well tolerated by the body. Like any medical procedure, implantation carries some risk — such as infections or healing problems — but a properly performed procedure and careful post-operative care reduce that risk to virtually zero." },
+          { "subtitle": "How much do dental implants cost?", "text": "The cost of placing one implant is PLN 3,700, and the cost of a single crown on that implant is PLN 3,300." }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Contact us",
+    "sub": "We are open to new patients. Call us to schedule a convenient consultation.",
+    "callLabel": "Call us",
+    "waLabel": "WhatsApp",
+    "addressLabel": "Visit us",
+    "hoursLabel": "Opening hours",
+    "hours": "Monday – Friday:",
+    "address": "ul. Księdza Jałowego 8/1,\n35-010 Rzeszów",
+    "mapTitle": "Clinic Location – Rzeszów",
+    "infoTitle": "Telephone bookings",
+    "infoText": "Please contact us to schedule an appointment before visiting the clinic."
+  },
+  "footer": {
+    "tagline": "Dedicated to excellence in implantology and reconstructive dentistry. Your smile is our reputation.",
+    "navTitle": "Navigation",
+    "nav1": "About our Clinic",
+    "nav2": "Everything about implants",
+    "nav3": "Our Services",
+    "hoursTitle": "Opening hours",
+    "monFri": "Mon – Fri:",
+    "sat": "Saturday:",
+    "sun": "Sunday:",
+    "closed": "Closed",
+    "contactTitle": "Quick Contact",
+    "contactSub": "Book an appointment or ask a question.",
+    "rights": "All rights reserved."
+  },
+  "cookie": {
+    "ariaLabel": "Cookie information",
+    "title": "This website uses cookies",
+    "text": "We use necessary cookies to ensure the website functions properly. Optional (analytical) cookies help us improve the site by analysing traffic. By clicking \"Accept all\" you consent to the processing of optional cookies. Selecting \"Necessary only\" means we use only technical cookies. You can withdraw your consent at any time by clearing your browser data.",
+    "necessary": "Necessary only",
+    "acceptAll": "Accept all"
+  }
+}
