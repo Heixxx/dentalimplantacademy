@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 
 interface TeamMember {
     id: number;
+    name: string;
+    role: string;
     imageSrc: string;
 }
 
